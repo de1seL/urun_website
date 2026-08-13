@@ -5,12 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QAsight — Web QA & CRM için yapay zeka</title>
 <meta name="description" content="QAsight, web ajansları ve satış ekipleri için yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM verinizi okur ve önemli olanı öne çıkarır.">
+<meta name="theme-color" content="#0a0d13">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QAsight">
+<meta property="og:title" content="QAsight — Web QA & CRM için yapay zeka">
+<meta property="og:description" content="Siteleri otomatik denetleyen ve CRM verinizi okuyup önemli olanı öne çıkaran yapay zeka modülleri.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0d13'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%2334d399' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<a class="skip-link" href="#products">İçeriğe geç</a>
 
 <nav id="nav">
   <div class="wrap">
@@ -19,24 +28,62 @@
       <a class="navlink" href="#products">Ürünler</a>
       <a class="navlink" href="#features">Özellikler</a>
       <a class="navlink" href="#how">Nasıl çalışır</a>
+      <a class="navlink" href="#faq">SSS</a>
       <a class="cta-btn" href="#contact">Demo iste</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="wrap">
+    <a href="#products">Ürünler</a>
+    <a href="#features">Özellikler</a>
+    <a href="#how">Nasıl çalışır</a>
+    <a href="#faq">SSS</a>
+    <a class="cta-btn" href="#contact">Demo iste</a>
+  </div>
+</div>
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow reveal">sistem aktif · 2 modül canlı</div>
-    <h1 class="reveal" style="--d:.05s">Kaliteyi <span class="accent">görünür</span> kılıyoruz.</h1>
-    <p class="hero-sub reveal" style="--d:.1s">QAsight, web ajanslarının ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
-    <div class="hero-actions reveal" style="--d:.15s">
-      <a class="cta-btn" href="#contact">Ücretsiz demo iste →</a>
-      <a class="btn-outline" href="#products">Modülleri gör</a>
+    <div class="hero-copy">
+      <div class="eyebrow reveal">sistem aktif · 2 modül canlı</div>
+      <h1 class="reveal" style="--d:.05s">Kaliteyi <span class="accent">görünür</span> kılıyoruz.</h1>
+      <p class="hero-sub reveal" style="--d:.1s">QAsight, web ajanslarının ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
+      <div class="hero-actions reveal" style="--d:.15s">
+        <a class="cta-btn" href="#contact">Ücretsiz demo iste →</a>
+        <a class="btn-outline" href="#products">Modülleri gör</a>
+      </div>
+      <div class="hero-meta reveal" style="--d:.2s">
+        <div><div class="num" data-count="2">0</div><div class="label">aktif ürün</div></div>
+        <div><div class="num" data-count="60" data-suffix="+">0</div><div class="label">otomatik QA kontrolü</div></div>
+        <div><div class="num" data-count="4">0</div><div class="label">CRM zeka görevi</div></div>
+      </div>
     </div>
-    <div class="hero-meta reveal" style="--d:.2s">
-      <div><div class="num" data-count="2">0</div><div class="label">aktif ürün</div></div>
-      <div><div class="num" data-count="60" data-suffix="+">0</div><div class="label">otomatik QA kontrolü</div></div>
-      <div><div class="num" data-count="4">0</div><div class="label">CRM zeka görevi</div></div>
+
+    <div class="hero-visual reveal" style="--d:.25s" aria-hidden="true">
+      <div class="report-card">
+        <div class="report-head">
+          <span class="traffic"><i></i><i></i><i></i></span>
+          <span class="url">qasight · scan("novadesign.co")</span>
+          <span class="live">canlı</span>
+        </div>
+        <div class="report-score">
+          <div class="score-ring"><b>82</b></div>
+          <div class="label">
+            <small>sağlık skoru</small>
+            <strong>İyi — 4 hızlı kazanım</strong>
+          </div>
+        </div>
+        <div class="report-rows">
+          <div class="report-row ok"><span class="mark">✓</span><span class="txt">SSL sertifikası geçerli</span><span class="meta">218 gün</span></div>
+          <div class="report-row ok"><span class="mark">✓</span><span class="txt">Mobil uyumlu · viewport</span><span class="meta">OK</span></div>
+          <div class="report-row warn"><span class="mark">!</span><span class="txt">En büyük içerik geç yükleniyor</span><span class="meta">LCP 4.2s</span></div>
+          <div class="report-row err"><span class="mark">✕</span><span class="txt">Kırık iç bağlantı</span><span class="meta">3 adet</span></div>
+          <div class="report-row warn"><span class="mark">!</span><span class="txt">Çerez onayı bulunamadı</span><span class="meta">KVKK</span></div>
+        </div>
+        <div class="report-foot">→ white-label rapor + müşteri e-postası hazır</div>
+      </div>
     </div>
   </div>
 </header>
@@ -145,6 +192,38 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">/sık sorulanlar</span>
+      <h2>Merak edilenler</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>Başkasının sitesini tarayabilir miyim?</summary>
+        <div class="faq-body">Hayır. Web QA modülünde alan adı doğrulaması zorunludur — sahiplik bir meta etiketiyle kanıtlanmadan hiçbir tarama başlamaz. Ayrıca robots.txt'e uyulur ve form gönderimi varsayılan olarak kapalıdır.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>CRM verime yazma yetkisi veriyor muyum?</summary>
+        <div class="faq-body">Hayır. CRM AI Katmanı bilinçli olarak salt-okunurdur; hiçbir kaydı değiştirmez, silmez ya da yeni kayıt oluşturmaz. Yalnızca okur, yorumlar ve size brifing çıkarır — bu, teknik riski ve müşteri direncini azaltır.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Yapay zeka anahtarım yoksa çalışır mı?</summary>
+        <div class="faq-body">Evet. LLM soyutlanmıştır: API anahtarı yoksa kural tabanlı bir yedeğe düşülür ve ürün çevrimdışı çalışmaya devam eder. Verinin binadan çıkmasını istemeyen firmalar için on-prem kurulum da mümkündür.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Raporları kendi markamla gönderebilir miyim?</summary>
+        <div class="faq-body">Evet. Raporlar white-label'dır: kendi logonuz, marka renginiz ve paylaşılabilir link ile müşteriye doğrudan gönderilebilir. Ürün ayrıca kopyalayıp gönderebileceğiniz e-posta metnini de üretir.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Kurulum ne kadar sürer?</summary>
+        <div class="faq-body">Web QA için bir URL girip sahipliği doğrulamak yeterli — dakikalar sürer. CRM tarafında HubSpot ve yaygın CRM'lere salt-okunur bir token ile bağlanılır; ilk brifingi aynı gün alırsınız.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
@@ -187,6 +266,17 @@
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* mobile menu */
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  };
+  burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

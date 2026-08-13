@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Web QA AI Hizmeti — QAsight</title>
 <meta name="description" content="QAsight Web QA AI: müşteri sitelerini otomatik test edip müşteriye gönderilebilir profesyonel QA raporu üreten servis.">
+<meta name="theme-color" content="#0a0d13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0d13'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%2334d399' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,11 +19,21 @@
     <a class="logo" href="index.html"><span class="dot"></span>QAsight</a>
     <div class="nav-right">
       <a class="navlink" href="index.html#products">Ürünler</a>
+      <a class="navlink" href="index.html#faq">SSS</a>
       <a class="navlink" href="index.html#contact">İletişim</a>
       <a class="cta-btn" href="index.html#contact">Demo iste</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="wrap">
+    <a href="index.html#products">Ürünler</a>
+    <a href="index.html#faq">SSS</a>
+    <a href="index.html#contact">İletişim</a>
+    <a class="cta-btn" href="index.html#contact">Demo iste</a>
+  </div>
+</div>
 
 <header class="detail-hero">
   <div class="wrap">
@@ -162,6 +174,16 @@
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  };
+  burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce && 'IntersectionObserver' in window) {
