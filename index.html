@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Lab — AI Ürünleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><span class="dot"></span>nova_lab</div>
+    <div>
+      <a class="navlink" href="#products">ürünler</a>
+      <a class="navlink" href="#contact">iletişim</a>
+      <a class="cta-btn" href="#contact" style="margin-left:32px;">Demo iste</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">sistem aktif · 2 modül canlı</div>
+    <h1>Dağınık veriyi, kullanılabilir<br>bir <span class="accent">içgörüye</span> dönüştürüyoruz.</h1>
+    <p class="hero-sub">Nova Lab, ajansların ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
+    <div class="hero-meta">
+      <div><div class="num">02</div><div class="label">aktif ürün</div></div>
+      <div><div class="num">60+</div><div class="label">otomatik QA kontrolü</div></div>
+      <div><div class="num">4</div><div class="label">CRM zeka görevi</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="marquee" id="marquee"></div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">/ürünler</span>
+      <h2>Modül kütüphanesi</h2>
+    </div>
+    <div class="product-grid two-col">
+
+      <a class="card-link" href="web-qa.html">
+      <div class="card">
+        <div class="card-top"><span class="card-id">MOD.01</span><span class="card-status">Aktif</span></div>
+        <div class="card-icon">◈</div>
+        <h3>Web QA AI Hizmeti</h3>
+        <p>Web ajanslarının müşteri sitelerini otomatik test edip müşteriye gönderilebilir profesyonel QA raporu üretmesini sağlar. Bir URL girilir, 60'tan fazla kontrol çalışır; bulgular önem ve efora göre sıralanır ve yapay zeka teknik sonuçları müşteri diliyle açıklar.</p>
+        <div class="tags"><span class="tag">QA otomasyonu</span><span class="tag">SEO & performans</span><span class="tag">KVKK denetimi</span><span class="tag">White-label rapor</span></div>
+        <span class="card-more">Detayları gör ↗</span>
+      </div>
+      </a>
+
+      <a class="card-link" href="crm-ai.html">
+      <div class="card">
+        <div class="card-top"><span class="card-id">MOD.02</span><span class="card-status">Aktif</span></div>
+        <div class="card-icon">◎</div>
+        <h3>CRM AI Katmanı</h3>
+        <p>Şirketin mevcut CRM'ine bağlanan, içindeki dağınık veriyi okuyup satış ekibinin kullanabileceği çıktılara çeviren bir yapay zeka katmanı. CRM'in yerini almaz, kayıt tutmaz — yalnızca salt-okunur bir yorumlama katmanıdır.</p>
+        <div class="tags"><span class="tag">CRM entegrasyonu</span><span class="tag">Satış zekası</span><span class="tag">Salt-okunur</span><span class="tag">HubSpot desteği</span></div>
+        <span class="card-more">Detayları gör ↗</span>
+      </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>Bir modülü denemeye hazır mısın?</h2>
+      <p>Ürünlerimiz hakkında bilgi almak veya demo talep etmek için bize ulaş.</p>
+      <div class="contact-actions">
+        <a class="cta-btn" href="mailto:merhaba@novalab.ai">merhaba@novalab.ai</a>
+        <a class="btn-outline" href="#products">Ürünlere dön</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+    <span>© 2026 nova_lab — tüm modüller korunmaktadır</span>
+    <span>build: v1.0.0</span>
+  </div>
+</footer>
+
+<script>
+  const items = ["web_qa.scan(url)", "web_qa.generate_report()", "crm_ai.briefing(customer)", "crm_ai.detect_stale_deals()", "crm_ai.weekly_summary()", "web_qa.client_email()"];
+  const marquee = document.getElementById('marquee');
+  const full = [...items, ...items];
+  full.forEach(t => {
+    const span = document.createElement('span');
+    span.textContent = t;
+    marquee.appendChild(span);
+  });
+</script>
+
+</body>
+</html>

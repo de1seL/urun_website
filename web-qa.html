@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web QA AI Hizmeti — nova_lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html" style="text-decoration:none;"><span class="dot"></span>nova_lab</a>
+    <div>
+      <a class="navlink" href="index.html#products">ürünler</a>
+      <a class="navlink" href="index.html#contact">iletişim</a>
+      <a class="cta-btn" href="index.html#contact" style="margin-left:32px;">Demo iste</a>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">← Tüm ürünler</a>
+    <span class="card-id">MOD.01 · Aktif</span>
+    <h1>Web QA AI Hizmeti</h1>
+    <p class="lede">Web ajanslarının müşteri sitelerini otomatik test edip müşteriye gönderilebilir profesyonel QA raporu üretmesini sağlayan servis. Bir URL girilir, 60'tan fazla kontrol çalışır, bulgular önem ve efora göre sıralanır, yapay zeka teknik bulguları müşteri diliyle açıklar ve sonunda white-label rapor ile hazır e-posta üretilir.</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Nasıl çalışır</h2>
+    <div class="flow">URL girilir → 60+ kontrol çalışır → bulgular önem ve efora göre sıralanır
+→ AI teknik bulguları müşteri diliyle açıklar → white-label rapor + hazır e-posta</div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>İki kullanım şekli</h2>
+    <table class="spec-table">
+      <tr><th>Şekil</th><th>Ne için</th></tr>
+      <tr>
+        <td class="key">Web platformu</td>
+        <td>Şirketler giriş yapar, sitelerini ekler, siteler otomatik izlenir; bir sorun çıktığında panele alarm düşer ve ilgili kişilere e-posta gönderilir.</td>
+      </tr>
+      <tr>
+        <td class="key">Tek seferlik tarama (CLI)</td>
+        <td>Panel kurmadan hızlı deneme içindir; bir komutla site taranır ve HTML/PDF rapor ile müşteriye gönderilecek e-posta metni üretilir. Yapay zeka anahtarı olmadan da, şablon metinlerle çalışır.</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Web platformu nasıl işler</h2>
+    <div class="flow">Şirket giriş yapar → site ekler → sahiplik doğrular (meta etiketi)
+   → otomatik/elle tarama → eşiği aşan bulgular ALARM olur
+   → panele düşer + alıcılara e-posta gider → "gördüm" ile kapatılır
+   → sonraki taramada çözülen alarmlar otomatik kapanır</div>
+    <p style="margin-top:20px;">Alan adı doğrulaması zorunludur — sahiplik kanıtlanmadan hiçbir tarama başlamaz, bu sayede başkasının sitesi izlenemez.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Kontrol kapsamı</h2>
+    <table class="spec-table">
+      <tr><th>Kategori</th><th>Örnek kontroller</th></tr>
+      <tr><td class="key">Bağlantılar</td><td>Kırık iç/dış link, yönlendirme zinciri, boş link, HTTP iç link</td></tr>
+      <tr><td class="key">SEO</td><td>Title, meta, H1 hiyerarşisi, canonical, alt metin, yinelenen başlık, öksüz sayfa, soft 404</td></tr>
+      <tr><td class="key">Mobil</td><td>Yatay taşma, viewport meta, dokunma alanı boyutu, küçük font, responsive olmayan tablo</td></tr>
+      <tr><td class="key">Performans</td><td>Sayfa ağırlığı, büyük görsel, eski format, render-blocking script, Core Web Vitals</td></tr>
+      <tr><td class="key">Formlar</td><td>Güvensiz action, etiketsiz alan, KVKK onay kutusu, spam koruması, validasyon testi</td></tr>
+      <tr><td class="key">İçerik</td><td>Lorem ipsum kalıntısı, test iletişim bilgisi, bozuk görsel, JS hataları, eksik favicon</td></tr>
+      <tr><td class="key">Güvenlik</td><td>Güvenlik başlıkları, karışık içerik, sızmış API anahtarı, SSL süresi, açıkta kalan dosyalar</td></tr>
+      <tr><td class="key">Erişilebilirlik</td><td>axe-core ile WCAG 2.1 A/AA denetimi</td></tr>
+      <tr><td class="key">Yasal</td><td>Çerez onayı, KVKK metni, mesafeli satış sözleşmesi, MERSİS, ETBİS</td></tr>
+      <tr><td class="key">Teslim</td><td>Staging URL kalıntısı, test anahtarı, bakım modu, varsayılan başlık</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Tarama profilleri</h2>
+    <table class="spec-table">
+      <tr><th>Profil</th><th>Kime</th><th>Ne kontrol eder</th></tr>
+      <tr><td class="key">prelaunch</td><td>Siteyi teslim etmeden önce</td><td>Staging kalıntısı, dolgu metin, eksik ölçüm gibi utandırıcı hatalar</td></tr>
+      <tr><td class="key">health</td><td>Aylık izleme</td><td>Bozulmalar, görsel regresyon, hız</td></tr>
+      <tr><td class="key">seo</td><td>İçerik ekibi</td><td>Sadece arama görünürlüğü</td></tr>
+      <tr><td class="key">full</td><td>İlk tarama / derin denetim</td><td>Tüm kontroller</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Rakiplerden farkı</h2>
+    <p>Screaming Frog, Sitebulb ve Lighthouse gibi araçlar zaten teknik veri üretir. Onların çıktısı ham veridir; bu ürünün çıktısı ajansın müşterisine doğrudan gönderebileceği bir rapordur.</p>
+    <div class="diff-grid">
+      <div class="diff-row"><div class="diff-label">Teslim öncesi kontrol</div><div class="diff-desc">Staging URL'leri, test ödeme anahtarları, lorem ipsum, noindex, bakım modu — canlıya geçerken unutulan her şeyi yakalar.</div></div>
+      <div class="diff-row"><div class="diff-label">AI müşteri dili</div><div class="diff-desc">"LCP 4.2s" yerine "Sayfa 4 saniyede açılıyor, mobil ziyaretçilerin yarısı beklemeden çıkıyor" gibi anlaşılır açıklamalar üretir.</div></div>
+      <div class="diff-row"><div class="diff-label">Hazır müşteri e-postası</div><div class="diff-desc">Ajansın kopyalayıp doğrudan gönderebileceği e-posta metnini de üretir.</div></div>
+      <div class="diff-row"><div class="diff-label">KVKK / e-ticaret mevzuatı</div><div class="diff-desc">Çerez onayı, aydınlatma metni, mesafeli satış sözleşmesi, MERSİS, ETBİS gibi Türkiye pazarına özel kontrolleri içerir.</div></div>
+      <div class="diff-row"><div class="diff-label">İletişim tutarlılığı</div><div class="diff-desc">Footer'daki yeni telefon ile iletişim sayfasındaki eski numara gibi tutarsızlıkları yakalar; genel araçlar bunu göremez.</div></div>
+      <div class="diff-row"><div class="diff-label">Ölçüm altyapısı denetimi</div><div class="diff-desc">GA4/GTM kurulu mu, bazı sayfalarda eksik mi, e-ticarette dönüşüm takibi var mı kontrol eder.</div></div>
+      <div class="diff-row"><div class="diff-label">CMS'e özel kontroller</div><div class="diff-desc">WordPress'te xmlrpc ve dizin listeleme, Shopify'da şifre koruması gibi platforma özel riskleri tarar.</div></div>
+      <div class="diff-row"><div class="diff-label">Öncelik matrisi</div><div class="diff-desc">Etki ÷ efor sıralaması ve "hızlı kazanımlar" listesiyle hangi işin önce yapılacağını gösterir.</div></div>
+      <div class="diff-row"><div class="diff-label">Görsel regresyon</div><div class="diff-desc">Önceki taramayla piksel karşılaştırması yapar, değişen bölgeleri işaretler.</div></div>
+      <div class="diff-row"><div class="diff-label">Tarama karşılaştırması</div><div class="diff-desc">"Geçen aya göre 3 sorun çözüldü, 1 yeni sorun çıktı" gibi aylık paket için satış argümanı sunar.</div></div>
+      <div class="diff-row"><div class="diff-label">White-label</div><div class="diff-desc">Ajans logosu, marka rengi ve paylaşılabilir link ile raporu markalaştırır.</div></div>
+      <div class="diff-row"><div class="diff-label">Portföy görünümü</div><div class="diff-desc">Ajansın onlarca müşteri sitesinin sağlık skorunu tek ekranda gösterir.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Güvenlik ve etik</h2>
+    <p>Başkasının sitesini taramak sorumluluk doğurur; ürün bunu ciddiye alır.</p>
+    <div class="pill-list">
+      <span class="pill">Alan adı doğrulaması zorunlu</span>
+      <span class="pill">robots.txt'e uyulur</span>
+      <span class="pill">Form gönderimi varsayılan kapalı</span>
+      <span class="pill">Eşzamanlılık sınırlı</span>
+      <span class="pill">Bot kimliği açıkça belirtilir</span>
+      <span class="pill">Sızmış anahtarlar maskelenir</span>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <div class="detail-cta">
+      <h3>Bu modülü denemeye hazır mısın?</h3>
+      <p>Ajansın için bir demo tarama planlayalım.</p>
+      <a class="cta-btn" href="index.html#contact">İletişime geç</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+    <span>© 2026 nova_lab — tüm modüller korunmaktadır</span>
+    <span>build: v1.0.0</span>
+  </div>
+</footer>
+
+</body>
+</html>

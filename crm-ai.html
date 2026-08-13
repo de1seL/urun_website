@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM AI Katmanı — nova_lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html" style="text-decoration:none;"><span class="dot"></span>nova_lab</a>
+    <div>
+      <a class="navlink" href="index.html#products">ürünler</a>
+      <a class="navlink" href="index.html#contact">iletişim</a>
+      <a class="cta-btn" href="index.html#contact" style="margin-left:32px;">Demo iste</a>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">← Tüm ürünler</a>
+    <span class="card-id">MOD.02 · Aktif</span>
+    <h1>CRM AI Katmanı</h1>
+    <p class="lede">Şirketin mevcut CRM'ine bağlanan, içindeki dağınık veriyi okuyup satış ekibinin gerçekten kullanabileceği çıktılara çeviren bir yapay zeka katmanı. Bu bir CRM değildir ve CRM'in yerini almaz — kayıt tutmaz, veri girişi ekranı sunmaz, satış sürecini yönetmez. Mevcut CRM'in üzerine oturan salt bir okuma ve yorumlama katmanıdır.</p>
+    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);">"CRM'inizdeki veri raporda değil, işinizin içinde olsun."</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Yapay zekânın yaptığı dört iş</h2>
+    <div class="diff-grid">
+      <div class="diff-row"><div class="diff-label">01 · Görüşme öncesi brifing</div><div class="diff-desc">Müşteriye ait tüm CRM geçmişini okuyup tek sayfalık brifing hazırlar, görüşmeden önce e-posta ile gönderir.</div></div>
+      <div class="diff-row"><div class="diff-label">02 · Unutulmuş fırsat tespiti</div><div class="diff-desc">Durmuş fırsatları neden durduğuyla birlikte listeler — teklif beklemede mi, müşteri sessiz mi, içeride mi takılmış.</div></div>
+      <div class="diff-row"><div class="diff-label">03 · Yenileme ve taahhüt takvimi</div><div class="diff-desc">Serbest metne gömülü lisans ve sözleşme tarihlerini, verilmiş taahhütleri çıkarıp takvime döker.</div></div>
+      <div class="diff-row"><div class="diff-label">04 · Haftalık yönetim özeti</div><div class="diff-desc">Sayının yanında sebebini de yazan düz metin bir özet üretir.</div></div>
+    </div>
+    <p style="margin-top:24px;">Kalıcı fark özellik sayısında değil, alan bilgisinde: sanallaştırma lisansları, yedekleme sürümleri, erişim lisansı mantığı gibi teknik satışa özgü çıkarımlar yapabilir. Değer doğrudan gelen kutusuna taşınır; kurulum yalnızca salt-okunur yetkiyle yapılır.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Nasıl çalışır</h2>
+    <div class="flow">CRM kayıtları ─┐
+Aktivite notları├─▶ Normalleştirme ─▶ AI analiz katmanı ─┬─▶ Brifing
+E-posta geçmişi ┘                                        ├─▶ Risk uyarıları
+                                                          └─▶ Haftalık özet
+                                                                    │
+                                                          E-posta + Web arayüzü</div>
+    <table class="spec-table" style="margin-top:24px;">
+      <tr><th>Katman</th><th>Sorumluluk</th></tr>
+      <tr><td class="key">Alan modelleri</td><td>CRM'den bağımsız ortak veri tipleri</td></tr>
+      <tr><td class="key">CRM adapter</td><td>Salt-okunur CRM erişimi (mock + HubSpot)</td></tr>
+      <tr><td class="key">AI analiz</td><td>Çıkarım (Claude tool-use), brifing, durgunluk, özet üretimi</td></tr>
+      <tr><td class="key">E-posta</td><td>Günlük değerin çıktı kanalı</td></tr>
+      <tr><td class="key">Depo</td><td>Düzeltme ve doğrulama kaydı (SQLite)</td></tr>
+      <tr><td class="key">Web</td><td>Panel, düzeltme ekranı, arşiv görünümü</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Tasarım kararları</h2>
+    <div class="diff-grid">
+      <div class="diff-row"><div class="diff-label">CRM soyutlandı</div><div class="diff-desc">İlk sürümde tek gerçek CRM desteklenir; entegrasyon bir arayüzün arkasına alınmıştır. Şu an gerçekçi örnek veriyle çalışan bir test CRM'i var — boru hattı gerçek API olmadan uçtan uca çalışır.</div></div>
+      <div class="diff-row"><div class="diff-label">LLM soyutlandı</div><div class="diff-desc">Varsayılan olarak Anthropic Claude kullanılır. API anahtarı yoksa kural tabanlı bir yedeğe düşülür; proje offline çalışır.</div></div>
+      <div class="diff-row"><div class="diff-label">Yalnızca okuma</div><div class="diff-desc">Konsept gereği yazma yetkisi yoktur — bu, teknik riski ve müşteri direncini azaltır.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Gerçek CRM'e bağlanma</h2>
+    <p>Şu anda HubSpot desteklenir. Bağlantı için gereken erişim token'ı yalnızca salt-okunur kapsamlara ihtiyaç duyar: şirketler, fırsatlar, kişiler ve notlar için okuma izni. Yazma yetkisi bilinçli olarak istenmez.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>On-prem kurulum</h2>
+    <p>CRM en hassas veridir; birçok firma verinin binadan çıkmasını istemez. Bu ürün buna uygun tasarlandı — dış servise bağımlı değil, tek komutla şirketin kendi sunucusunda çalışabilir. İlk açılışta bir yönetici hesabı oluşturulur; tüm sayfalar ve API'ler giriş arkasındadır. Tüm veri sunucuda kalır.</p>
+    <table class="spec-table">
+      <tr><th>Seçenek</th><th>Gizlilik derecesi</th></tr>
+      <tr><td class="key">Anahtar yok</td><td>Yerel kural tabanlı çıkarım; veri hiç dışarı çıkmaz (en katı)</td></tr>
+      <tr><td class="key">Claude API anahtarı</td><td>Yalnızca ilgili not metni API'ye gider</td></tr>
+      <tr><td class="key">Özel LLM uç noktası</td><td>Tam on-prem; veri ağdan hiç çıkmaz</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Kapsam sınırı</h2>
+    <div class="scope-note">
+      <p>CRM alanına tam girildiğinde Salesforce, HubSpot ve Zoho gibi devlerle rekabet başlar; bu rekabet küçük bir ekip için kazanılamaz. Doğru konumlandırma mevcut sistemi değiştirmek değil, kullanılabilir hale getirmektir. Bu ürün bilinçli olarak bu sınıra sadık kalır.</p>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <div class="detail-cta">
+      <h3>CRM'inizi konuşan bir katmana bağlayalım</h3>
+      <p>Salt-okunur kurulum, mevcut sisteminizi değiştirmeden çalışır.</p>
+      <a class="cta-btn" href="index.html#contact">İletişime geç</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+    <span>© 2026 nova_lab — tüm modüller korunmaktadır</span>
+    <span>build: v1.0.0</span>
+  </div>
+</footer>
+
+</body>
+</html>
