@@ -3,20 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web QA AI Hizmeti — nova_lab</title>
+<title>Web QA AI Hizmeti — QAsight</title>
+<meta name="description" content="QAsight Web QA AI: müşteri sitelerini otomatik test edip müşteriye gönderilebilir profesyonel QA raporu üreten servis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
+<nav id="nav">
   <div class="wrap">
-    <a class="logo" href="index.html" style="text-decoration:none;"><span class="dot"></span>nova_lab</a>
-    <div>
-      <a class="navlink" href="index.html#products">ürünler</a>
-      <a class="navlink" href="index.html#contact">iletişim</a>
-      <a class="cta-btn" href="index.html#contact" style="margin-left:32px;">Demo iste</a>
+    <a class="logo" href="index.html"><span class="dot"></span>QAsight</a>
+    <div class="nav-right">
+      <a class="navlink" href="index.html#products">Ürünler</a>
+      <a class="navlink" href="index.html#contact">İletişim</a>
+      <a class="cta-btn" href="index.html#contact">Demo iste</a>
     </div>
   </div>
 </nav>
@@ -145,11 +147,30 @@
 </section>
 
 <footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
-    <span>© 2026 nova_lab — tüm modüller korunmaktadır</span>
+  <div class="wrap">
+    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <div class="foot-links">
+      <a href="index.html#products">Ürünler</a>
+      <a href="index.html#contact">İletişim</a>
+    </div>
     <span>build: v1.0.0</span>
   </div>
 </footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.detail-section, .detail-hero').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+  }
+</script>
 
 </body>
 </html>

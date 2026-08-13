@@ -3,33 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nova Lab — AI Ürünleri</title>
+<title>QAsight — Web QA & CRM için yapay zeka</title>
+<meta name="description" content="QAsight, web ajansları ve satış ekipleri için yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM verinizi okur ve önemli olanı öne çıkarır.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
+<nav id="nav">
   <div class="wrap">
-    <div class="logo"><span class="dot"></span>nova_lab</div>
-    <div>
-      <a class="navlink" href="#products">ürünler</a>
-      <a class="navlink" href="#contact">iletişim</a>
-      <a class="cta-btn" href="#contact" style="margin-left:32px;">Demo iste</a>
+    <div class="logo"><span class="dot"></span>QAsight</div>
+    <div class="nav-right">
+      <a class="navlink" href="#products">Ürünler</a>
+      <a class="navlink" href="#features">Özellikler</a>
+      <a class="navlink" href="#how">Nasıl çalışır</a>
+      <a class="cta-btn" href="#contact">Demo iste</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">sistem aktif · 2 modül canlı</div>
-    <h1>Dağınık veriyi, kullanılabilir<br>bir <span class="accent">içgörüye</span> dönüştürüyoruz.</h1>
-    <p class="hero-sub">Nova Lab, ajansların ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
-    <div class="hero-meta">
-      <div><div class="num">02</div><div class="label">aktif ürün</div></div>
-      <div><div class="num">60+</div><div class="label">otomatik QA kontrolü</div></div>
-      <div><div class="num">4</div><div class="label">CRM zeka görevi</div></div>
+    <div class="eyebrow reveal">sistem aktif · 2 modül canlı</div>
+    <h1 class="reveal" style="--d:.05s">Kaliteyi <span class="accent">görünür</span> kılıyoruz.</h1>
+    <p class="hero-sub reveal" style="--d:.1s">QAsight, web ajanslarının ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
+    <div class="hero-actions reveal" style="--d:.15s">
+      <a class="cta-btn" href="#contact">Ücretsiz demo iste →</a>
+      <a class="btn-outline" href="#products">Modülleri gör</a>
+    </div>
+    <div class="hero-meta reveal" style="--d:.2s">
+      <div><div class="num" data-count="2">0</div><div class="label">aktif ürün</div></div>
+      <div><div class="num" data-count="60" data-suffix="+">0</div><div class="label">otomatik QA kontrolü</div></div>
+      <div><div class="num" data-count="4">0</div><div class="label">CRM zeka görevi</div></div>
     </div>
   </div>
 </header>
@@ -40,27 +47,67 @@
   </div>
 </div>
 
+<!-- FEATURES / BENTO -->
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">/neden QAsight</span>
+      <h2>Teknik sonuçları, iş diline çeviren bir zeka katmanı</h2>
+      <p>Modüllerimiz mevcut araçlarınızın yerini almaz — üzerine oturur, veriyi okur ve karar verebileceğiniz çıktıya dönüştürür.</p>
+    </div>
+    <div class="bento">
+      <div class="bento-item wide reveal glow" style="--d:0s">
+        <div class="bento-icon">◈</div>
+        <h3>Otomatik denetim</h3>
+        <p>Bir URL girin; 60'tan fazla kontrol saniyeler içinde çalışır. Performans, erişilebilirlik, SEO ve KVKK bulguları önem ve efora göre sıralanır.</p>
+      </div>
+      <div class="bento-item half reveal glow" style="--d:.05s">
+        <div class="bento-icon">◎</div>
+        <h3>Salt-okunur güven</h3>
+        <p>CRM katmanı hiçbir kaydı değiştirmez. Yalnızca okur, yorumlar ve satış ekibine hazır brifing çıkarır.</p>
+      </div>
+      <div class="bento-item third reveal glow" style="--d:.1s">
+        <div class="bento-icon">⌘</div>
+        <h3>White-label</h3>
+        <p>Raporlar sizin markanızla, müşteriye gönderilebilir formatta.</p>
+      </div>
+      <div class="bento-item third reveal glow" style="--d:.15s">
+        <div class="bento-icon">✳</div>
+        <h3>İnsan dili</h3>
+        <p>Teknik jargon yerine müşterinin anlayacağı açıklamalar.</p>
+      </div>
+      <div class="bento-item third reveal glow" style="--d:.2s">
+        <div class="bento-icon">⚡</div>
+        <h3>Hızlı entegrasyon</h3>
+        <p>HubSpot ve yaygın CRM'lerle dakikalar içinde bağlanır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
 <section id="products">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="section-tag">/ürünler</span>
       <h2>Modül kütüphanesi</h2>
+      <p>Her modül tek bir işi çok iyi yapmak için tasarlandı. Birini ya da ikisini birden kullanın.</p>
     </div>
     <div class="product-grid two-col">
 
-      <a class="card-link" href="web-qa.html">
-      <div class="card">
+      <a class="card-link reveal" href="web-qa.html" style="--d:0s">
+      <div class="card glow">
         <div class="card-top"><span class="card-id">MOD.01</span><span class="card-status">Aktif</span></div>
         <div class="card-icon">◈</div>
         <h3>Web QA AI Hizmeti</h3>
         <p>Web ajanslarının müşteri sitelerini otomatik test edip müşteriye gönderilebilir profesyonel QA raporu üretmesini sağlar. Bir URL girilir, 60'tan fazla kontrol çalışır; bulgular önem ve efora göre sıralanır ve yapay zeka teknik sonuçları müşteri diliyle açıklar.</p>
-        <div class="tags"><span class="tag">QA otomasyonu</span><span class="tag">SEO & performans</span><span class="tag">KVKK denetimi</span><span class="tag">White-label rapor</span></div>
+        <div class="tags"><span class="tag">QA otomasyonu</span><span class="tag">SEO &amp; performans</span><span class="tag">KVKK denetimi</span><span class="tag">White-label rapor</span></div>
         <span class="card-more">Detayları gör ↗</span>
       </div>
       </a>
 
-      <a class="card-link" href="crm-ai.html">
-      <div class="card">
+      <a class="card-link reveal" href="crm-ai.html" style="--d:.08s">
+      <div class="card glow">
         <div class="card-top"><span class="card-id">MOD.02</span><span class="card-status">Aktif</span></div>
         <div class="card-icon">◎</div>
         <h3>CRM AI Katmanı</h3>
@@ -74,13 +121,38 @@
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">/nasıl çalışır</span>
+      <h2>Üç adımda içgörü</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" style="--d:0s">
+        <h4>Bağla</h4>
+        <p>Bir URL girin ya da CRM'inizi güvenli şekilde bağlayın. Kurulum dakikalar sürer.</p>
+      </div>
+      <div class="step reveal" style="--d:.08s">
+        <h4>Analiz et</h4>
+        <p>QAsight otomatik kontrolleri çalıştırır, veriyi okur ve bulguları önceliklendirir.</p>
+      </div>
+      <div class="step reveal" style="--d:.16s">
+        <h4>Harekete geç</h4>
+        <p>Müşteri diliyle yazılmış, markanızla sunulan bir rapor veya brifing alırsınız.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
-    <div class="contact-box">
+    <div class="contact-box reveal">
       <h2>Bir modülü denemeye hazır mısın?</h2>
       <p>Ürünlerimiz hakkında bilgi almak veya demo talep etmek için bize ulaş.</p>
       <div class="contact-actions">
-        <a class="cta-btn" href="mailto:merhaba@novalab.ai">merhaba@novalab.ai</a>
+        <a class="cta-btn" href="mailto:merhaba@qasight.ai">merhaba@qasight.ai</a>
         <a class="btn-outline" href="#products">Ürünlere dön</a>
       </div>
     </div>
@@ -88,13 +160,19 @@
 </section>
 
 <footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
-    <span>© 2026 nova_lab — tüm modüller korunmaktadır</span>
+  <div class="wrap">
+    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <div class="foot-links">
+      <a href="#products">Ürünler</a>
+      <a href="#features">Özellikler</a>
+      <a href="mailto:merhaba@qasight.ai">İletişim</a>
+    </div>
     <span>build: v1.0.0</span>
   </div>
 </footer>
 
 <script>
+  /* marquee */
   const items = ["web_qa.scan(url)", "web_qa.generate_report()", "crm_ai.briefing(customer)", "crm_ai.detect_stale_deals()", "crm_ai.weekly_summary()", "web_qa.client_email()"];
   const marquee = document.getElementById('marquee');
   const full = [...items, ...items];
@@ -103,6 +181,60 @@
     span.textContent = t;
     marquee.appendChild(span);
   });
+
+  /* nav border on scroll */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* scroll reveal */
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  /* animated counters */
+  const runCount = (el) => {
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    if (reduce) { el.textContent = target + suffix; return; }
+    const dur = 1100, start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if ('IntersectionObserver' in window) {
+    const co = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { runCount(e.target); co.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+  } else {
+    document.querySelectorAll('[data-count]').forEach(runCount);
+  }
+
+  /* pointer glow on cards */
+  if (!reduce) {
+    document.querySelectorAll('.glow').forEach(card => {
+      card.addEventListener('pointermove', (ev) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', ((ev.clientX - r.left) / r.width * 100) + '%');
+        card.style.setProperty('--my', ((ev.clientY - r.top) / r.height * 100) + '%');
+      });
+    });
+  }
 </script>
 
 </body>
