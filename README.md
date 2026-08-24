@@ -15,6 +15,9 @@ tanıtım sitesi. Statik HTML/CSS/JS — build adımı ya da harici bağımlıl�
 - **Excel & Rapor Otomasyonu** (`excel-reports.html`) — dağınık CSV/Excel
   dosyalarını tek temiz, formatlı bir rapora birleştiren; HTML/PDF, Google
   Sheets ve e-posta ile teslim eden, çoklu-müşteri/Stripe destekli araç.
+- **Müşteri Bazlı İş Akışı** (`n8n-automation.html`) — self-host n8n üzerine
+  kurulu, müşterinin tipine göre dallanan tek workflow; WhatsApp randevu
+  hatırlatma ve EVET/HAYIR cevap yakalama akışları dahil.
 
 ## Sayfalar
 
@@ -25,6 +28,7 @@ tanıtım sitesi. Statik HTML/CSS/JS — build adımı ya da harici bağımlıl�
 | `crm-ai.html` | CRM AI Katmanı ürün detay sayfası |
 | `tool-integration.html` | Entegrasyon & Otomasyon ürün detay sayfası |
 | `excel-reports.html` | Excel & Rapor Otomasyonu ürün detay sayfası |
+| `n8n-automation.html` | Müşteri Bazlı İş Akışı (self-host n8n) detay sayfası |
 | `style.css` | Ortak tasarım sistemi (koyu, teknik tema) |
 
 ## Tasarım

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Müşteri Bazlı İş Akışı (self-host n8n) — QAsight</title>
+<meta name="description" content="QAsight Müşteri Bazlı İş Akışı: kendi sunucunuzda çalışan self-host n8n üzerine kurulu, müşterinin tipine göre dallanan otomasyon workflow'ları — WhatsApp randevu hatırlatma dahil.">
+<meta name="theme-color" content="#0a0d13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0d13'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%2334d399' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="dot"></span>QAsight</a>
+    <div class="nav-right">
+      <a class="navlink" href="index.html#products">Ürünler</a>
+      <a class="navlink" href="index.html#faq">SSS</a>
+      <a class="navlink" href="index.html#contact">İletişim</a>
+      <a class="cta-btn" href="index.html#contact">Demo iste</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="wrap">
+    <a href="index.html#products">Ürünler</a>
+    <a href="index.html#faq">SSS</a>
+    <a href="index.html#contact">İletişim</a>
+    <a class="cta-btn" href="index.html#contact">Demo iste</a>
+  </div>
+</div>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">← Tüm ürünler</a>
+    <span class="card-id">MOD.05 · Aktif</span>
+    <h1>Müşteri Bazlı İş Akışı <span style="font-weight:400; color:var(--muted); font-size:.6em; display:inline-block;">(self-host n8n)</span></h1>
+    <p class="lede">Kendi sunucunuzda çalışan, kendi kendine barındırılan (self-host) <span style="font-family:var(--mono);color:var(--accent)">n8n</span> üzerine kurulu müşteri otomasyonu. Her müşteri farklı bir iş yapabilir — biri API'den çeker, biri e-posta okur, biri veritabanından çeker — ama hepsi <em>tek bir workflow</em> içinde, müşterinin <span style="font-family:var(--mono);color:var(--accent)">tip</span> alanına göre dallanarak yürür. Müşteriye özel bilgiler (API url'i, token, mailbox, SQL) kod içinde değil, listede veri olarak durur.</p>
+    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);">"Yeni müşteri eklemek bir kod değişikliği değil, listeye bir satır."</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Tek workflow, tipe göre dallanma</h2>
+    <div class="flow">Her Saat Çalış (Schedule)
+  → Müşteri Listesi              (her müşterinin bir 'tip'i var)
+  → Her Müşteri İçin (Loop)
+      → Müşteri Tipine Göre Ayır (Switch)
+          ├─ tip=api        → API'den Çek (HTTP)
+          ├─ tip=eposta     → E-posta Oku (IMAP)
+          ├─ tip=veritabani → DB'den Çek (Postgres)
+          └─ (diğer)        → Bilinmeyen Tip (atla)
+      → Ortak Düzenle (Set) → Hedefe Yaz</div>
+    <p style="margin-top:20px;">Müşterinin <span style="font-family:var(--mono);color:var(--accent)">tip</span> alanı hangi yoldan gideceğini belirler. Yeni bir iş tipi eklemek, Switch düğümüne bir kural ve yeni bir dal eklemekten ibarettir.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Hazır gelen workflow'lar</h2>
+    <div class="diff-grid">
+      <div class="diff-row"><div class="diff-label">Müşteri bazlı senkron</div><div class="diff-desc">Çok tipli veri senkronu: API / e-posta / veritabanı kaynaklarından çeker, ortak biçime getirir ve hedefe yazar — hepsi tek workflow'ta.</div></div>
+      <div class="diff-row"><div class="diff-label">Randevu hatırlatma (WhatsApp)</div><div class="diff-desc">Her sabah 10:00'da çalışır, <em>yarın</em> randevusu olanlara WhatsApp'tan "randevunuz var, gelecek misiniz?" mesajı atar. "Yarın" filtresi ve mesaj metni hazır.</div></div>
+      <div class="diff-row"><div class="diff-label">Cevap yakalama (EVET/HAYIR)</div><div class="diff-desc">Müşteri hatırlatmaya cevap yazınca tetiklenir; EVET/HAYIR'ı anlar, randevu durumunu günceller ve müşteriye yanıt döner. Anlaşılmayan cevaba "EVET ya da HAYIR yazın" der.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Randevu hatırlatma akışı</h2>
+    <div class="flow">Her Gün 10:00 (Schedule)
+  → Randevu Listesi (KAYNAK)     ← kendi kaynağınla değiştir
+  → Yarınki Randevuları Seç       ← "yarın" filtresi + mesaj metni (hazır)
+  → Her Randevu İçin (Loop)
+      → WhatsApp Gönder</div>
+    <p style="margin-top:20px;">Kaynak düğümü şu an örnek veri üretir; gerçekte Google Sheets / Calendar / Postgres / Excel-CSV ile değiştirilir — çıktı alanları (<span style="font-family:var(--mono)">ad</span>, <span style="font-family:var(--mono)">telefon</span>, <span style="font-family:var(--mono)">randevuTarihi</span>) aynı kaldığı sürece sonraki düğümler değişmeden çalışır.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Kendine göre uyarlama</h2>
+    <table class="spec-table">
+      <tr><th>Adım</th><th>Ne yapılır</th></tr>
+      <tr><td class="key">Müşteri listesi</td><td>Örnek 3 müşteriyi (<span style="font-family:var(--mono)">api</span>, <span style="font-family:var(--mono)">eposta</span>, <span style="font-family:var(--mono)">veritabani</span>) kendinizinkilerle doldurun — ya da bu düğümü Google Sheets/Postgres ile değiştirip kod düzenlemeden müşteri ekleyin/çıkarın</td></tr>
+      <tr><td class="key">Yeni iş tipi</td><td>Switch düğümüne bir kural + yeni bir dal ekleyin</td></tr>
+      <tr><td class="key">Placeholder düğümler</td><td>"E-posta Oku (IMAP koy)" → gerçek IMAP; "DB'den Çek (Postgres koy)" → gerçek Postgres; "Hedefe Yaz" → Postgres Insert / Sheets Append / CRM</td></tr>
+      <tr><td class="key">Zamanlama</td><td>Schedule aralığını istediğiniz gibi ayarlayın</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>İki çalıştırma yolu</h2>
+    <table class="spec-table">
+      <tr><th>Yol</th><th>Nasıl</th></tr>
+      <tr><td class="key">Docker (önerilen)</td><td><span style="font-family:var(--mono)">docker compose up -d</span> → n8n <span style="font-family:var(--mono)">http://localhost:5678</span> adresinde başlar. Tüm veri <span style="font-family:var(--mono)">n8n_data</span> volume'ünde.</td></tr>
+      <tr><td class="key">npx / npm</td><td>Windows'ta <span style="font-family:var(--mono)">start-windows.bat</span>'a çift tıkla; macOS/Linux'ta <span style="font-family:var(--mono)">./start-unix.sh</span>; ya da elle <span style="font-family:var(--mono)">npx n8n</span>. Docker gerektirmez.</td></tr>
+    </table>
+    <p style="margin-top:20px;">Workflow'lar arayüzden <span style="font-family:var(--mono)">⋯ → Import from File</span> ile ya da komut satırından <span style="font-family:var(--mono)">import:workflow</span> ile içeri aktarılır.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>WhatsApp kurulum notu</h2>
+    <div class="scope-note">
+      <p>Hatırlatma için WhatsApp Business Cloud credential'ı (Meta Access Token + Phone Number ID) ya da Twilio kullanılır. WhatsApp, müşteri son 24 saatte yazmadıysa serbest metne izin vermez — bu yüzden hatırlatmalar Meta'da <strong>onaylı bir şablon (template) mesajı</strong> ile gönderilir. Cevap geldiğinde 24 saatlik pencere açılır ve serbest yanıt mümkün olur.</p>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Sağlamlık ipuçları</h2>
+    <div class="pill-list">
+      <span class="pill">Sırlar n8n Credentials'ta</span>
+      <span class="pill">Continue On Fail ile izolasyon</span>
+      <span class="pill">Error Trigger → Slack/e-posta</span>
+      <span class="pill">n8n_data düzenli yedek</span>
+      <span class="pill">Tamamen self-host</span>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <div class="detail-cta">
+      <h3>Otomasyon kendi sunucunuzda çalışsın</h3>
+      <p>Müşteri listenizi ve iş tiplerinizi konuşalım; hazır workflow'ları sizin kaynaklarınıza bağlayalım.</p>
+      <a class="cta-btn" href="index.html#contact">İletişime geç</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <div class="foot-links">
+      <a href="index.html#products">Ürünler</a>
+      <a href="index.html#contact">İletişim</a>
+    </div>
+    <span>build: v1.0.0</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  };
+  burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.detail-section, .detail-hero').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+  }
+</script>
+
+</body>
+</html>

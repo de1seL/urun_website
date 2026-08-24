@@ -47,7 +47,7 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <div class="eyebrow reveal">sistem aktif · 4 modül canlı</div>
+      <div class="eyebrow reveal">sistem aktif · 5 modül canlı</div>
       <h1 class="reveal" style="--d:.05s">Kaliteyi <span class="accent">görünür</span> kılıyoruz.</h1>
       <p class="hero-sub reveal" style="--d:.1s">QAsight, web ajanslarının ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
       <div class="hero-actions reveal" style="--d:.15s">
@@ -55,7 +55,7 @@
         <a class="btn-outline" href="#products">Modülleri gör</a>
       </div>
       <div class="hero-meta reveal" style="--d:.2s">
-        <div><div class="num" data-count="4">0</div><div class="label">aktif modül</div></div>
+        <div><div class="num" data-count="5">0</div><div class="label">aktif modül</div></div>
         <div><div class="num" data-count="60" data-suffix="+">0</div><div class="label">otomatik QA kontrolü</div></div>
         <div><div class="num" data-count="5" data-suffix="+">0</div><div class="label">bağlı araç &amp; format</div></div>
       </div>
@@ -186,6 +186,17 @@
       </div>
       </a>
 
+      <a class="card-link reveal" href="n8n-automation.html" style="grid-column:1/-1; --d:.3s">
+      <div class="card glow">
+        <div class="card-top"><span class="card-id">MOD.05</span><span class="card-status">Aktif</span></div>
+        <div class="card-icon">⋔</div>
+        <h3>Müşteri Bazlı İş Akışı (self-host n8n)</h3>
+        <p>Kendi sunucunuzda çalışan, self-host n8n üzerine kurulu müşteri otomasyonu. Her müşteri farklı bir iş yapabilir (biri API'den çeker, biri e-posta okur, biri veritabanından) ama hepsi tek bir workflow içinde müşterinin <span style="font-family:var(--mono);color:var(--accent)">tip</span> alanına göre dallanarak yürür. Hazır örnekler: müşteri bazlı senkron ve WhatsApp randevu hatırlatma + EVET/HAYIR cevabı yakalama.</p>
+        <div class="tags"><span class="tag">self-host n8n</span><span class="tag">WhatsApp hatırlatma</span><span class="tag">tip'e göre dallanma</span><span class="tag">Docker / npx</span></div>
+        <span class="card-more">Detayları gör ↗</span>
+      </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -274,7 +285,7 @@
 
 <script>
   /* marquee */
-  const items = ["web_qa.scan(url)", "web_qa.generate_report()", "crm_ai.briefing(customer)", "crm_ai.detect_stale_deals()", "integrate.sheets_to_slack()", "integrate.pipeline.run(dry_run)", "reports.merge(folder)", "reports.export_xlsx()", "crm_ai.weekly_summary()", "web_qa.client_email()"];
+  const items = ["web_qa.scan(url)", "web_qa.generate_report()", "crm_ai.briefing(customer)", "crm_ai.detect_stale_deals()", "integrate.sheets_to_slack()", "integrate.pipeline.run(dry_run)", "reports.merge(folder)", "reports.export_xlsx()", "n8n.randevu_hatirlatma()", "n8n.switch(musteri.tip)", "crm_ai.weekly_summary()", "web_qa.client_email()"];
   const marquee = document.getElementById('marquee');
   const full = [...items, ...items];
   full.forEach(t => {
