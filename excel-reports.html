@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel & Rapor Otomasyonu — QAsight</title>
+<meta name="description" content="QAsight Excel & Rapor Otomasyonu: dağınık CSV/Excel dosyalarını tek temiz, formatlı bir rapora birleştiren; HTML/PDF, Google Sheets ve e-posta ile teslim eden modül.">
+<meta name="theme-color" content="#0a0d13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0d13'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%2334d399' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="dot"></span>QAsight</a>
+    <div class="nav-right">
+      <a class="navlink" href="index.html#products">Ürünler</a>
+      <a class="navlink" href="index.html#faq">SSS</a>
+      <a class="navlink" href="index.html#contact">İletişim</a>
+      <a class="cta-btn" href="index.html#contact">Demo iste</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="wrap">
+    <a href="index.html#products">Ürünler</a>
+    <a href="index.html#faq">SSS</a>
+    <a href="index.html#contact">İletişim</a>
+    <a class="cta-btn" href="index.html#contact">Demo iste</a>
+  </div>
+</div>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">← Tüm ürünler</a>
+    <span class="card-id">MOD.04 · Aktif</span>
+    <h1>Excel &amp; Rapor Otomasyonu</h1>
+    <p class="lede">Bir klasör dolusu dağınık CSV/Excel dosyasını tek, temiz ve formatlı bir rapora birleştirir. Farklı kolon adları, karışık tarih ve para formatları olsa bile veriyi normalize eder, özetler çıkarır ve renkli başlıklar, grafik ve bir "sorunlar" sayfasıyla profesyonel bir <span style="font-family:var(--mono);color:var(--accent)">.xlsx</span> üretir — istenirse tek sayfalık HTML/PDF özet, paylaşılan Google Sheet ve e-posta teslimi ile.</p>
+    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);">"Kodu değil, tek bir yapılandırma dosyasını değiştirerek yeni bir müşteriye dakikalar içinde uyarlanır."</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Ne yapar</h2>
+    <div class="flow">Klasördeki tüm .csv / .xlsx / .xls ─▶ Birleştir ─▶ Normalize ─▶ Özetle ─▶ Formatlı .xlsx
+                                                                       └▶ HTML/PDF · Google Sheets · e-posta</div>
+    <div class="diff-grid" style="margin-top:24px;">
+      <div class="diff-row"><div class="diff-label">01 · Birleştir</div><div class="diff-desc">Klasördeki her <span style="font-family:var(--mono)">.csv / .xlsx / .xls</span> dosyasını tek bir tabloda toplar; her satır kaynak dosyasıyla etiketlenir.</div></div>
+      <div class="diff-row"><div class="diff-label">02 · Normalize et</div><div class="diff-desc">Karışık tarih formatlarını ayrıştırır, para sembollerini temizler (<span style="font-family:var(--mono)">$12.50</span>, <span style="font-family:var(--mono)">12,50 TL</span>), adları düzenler (<span style="font-family:var(--mono)">blue widget</span> = <span style="font-family:var(--mono)">Blue  Widget</span>) ve yinelenen satırları kaldırır.</div></div>
+      <div class="diff-row"><div class="diff-label">03 · Özetle</div><div class="diff-desc">Toplam gelir, satılan adet, ortalama sipariş değeri, en çok satan ürünler ve her gruplama boyutu için bir kırılım (ürüne göre, müşteriye göre…).</div></div>
+      <div class="diff-row"><div class="diff-label">04 · Dışa aktar</div><div class="diff-desc">Renkli başlıklar, para biçimi, dondurulmuş başlık satırı, çubuk grafik ve veri-kalitesi "Sorunlar" sayfasıyla formatlı bir Excel — istenirse HTML/PDF, Google Sheet ve e-posta.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Üretilen Excel'in içi</h2>
+    <table class="spec-table">
+      <tr><th>Sayfa</th><th>İçerik</th></tr>
+      <tr><td class="key">Özet</td><td>Ana metrikler ve çubuk grafikli bir "En çok satanlar" tablosu</td></tr>
+      <tr><td class="key">Kırılım (Boyuta göre)</td><td>Her gruplama kolonu için bir sayfa (örn. <em>Ürüne göre</em>, <em>Müşteriye göre</em>), gelire göre sıralı</td></tr>
+      <tr><td class="key">Veri</td><td>Birleştirilmiş ve temizlenmiş tüm satırlar, her biri kaynak dosyasıyla etiketli</td></tr>
+      <tr><td class="key">Sorunlar</td><td>Veri kalitesi raporu: okunan satır, kaldırılan yinelenen, atlanan satır ve dosya başına okunamayan hücreler</td></tr>
+    </table>
+    <p style="margin-top:20px;">Dosyalar eksik, Excel'de açık ya da bozuk olduğunda Python hata dökümü yerine sade, anlaşılır hata mesajları gösterilir.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Yeni müşteriye uyarlama — asıl mesele</h2>
+    <p>Neredeyse her özelleştirme <strong>yapılandırma dosyasındaki</strong> bir değişikliktir; kod genellikle hiç değişmez. İki format desteklenir: tam güç için <span style="font-family:var(--mono)">config.py</span>, geliştirici olmayanlar için düz veri <span style="font-family:var(--mono)">config.yaml</span>.</p>
+    <table class="spec-table">
+      <tr><th>Değişen</th><th>Nerede</th></tr>
+      <tr><td class="key">Kolon başlıkları</td><td>COLUMN_MAPPING (büyük/küçük harf duyarsız; çok dilli örnekler dahil)</td></tr>
+      <tr><td class="key">Temizleme</td><td>COLUMN_CLEANING (date, number, integer, title, strip) + sabit DATE_FORMAT / DECIMAL_STYLE</td></tr>
+      <tr><td class="key">İş matematiği</td><td>DERIVED_COLUMNS (örn. satır toplamı) ve HEADLINE_METRICS</td></tr>
+      <tr><td class="key">Rapor şekli</td><td>GROUP_BY, GROUP_AGGREGATIONS, TOP_N_PRODUCTS</td></tr>
+      <tr><td class="key">Görünüm</td><td>CURRENCY_FORMAT, başlık renkleri, REPORT_TITLE</td></tr>
+      <tr><td class="key">Teslim</td><td>EMAIL ve GSHEETS (kimlik bilgileri ortam değişkeninden okunur, config'e yazılmaz)</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>İki kullanım şekli</h2>
+    <table class="spec-table">
+      <tr><th>Şekil</th><th>Ne için</th></tr>
+      <tr><td class="key">CLI</td><td>Bir komutla klasörü rapora çevirir: <span style="font-family:var(--mono)">merge_reports.py --folder ./data</span>. Tarih aralığı, glob deseni, HTML/PDF, Google Sheets ve e-posta bayrakları desteklenir.</td></tr>
+      <tr><td class="key">Web arayüzü</td><td>Terminal istemeyen müşteriler için sürükle-bırak: dosyaları yükle, bir config seç, Excel ve HTML raporu indir (Streamlit).</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Abonelik olarak satmak</h2>
+    <p>Tek seferlik iş yerine düzenli gelir isterseniz, raporları <strong>siz</strong> bir programa göre üretip teslim edersiniz — müşteri kodu hiç görmez. Bir yönetim manifestindeki <span style="font-family:var(--mono)">active</span> bayrağı abonelik kill-switch'inizdir: <span style="font-family:var(--mono)">false</span> yapın, o müşterinin raporları durur.</p>
+    <div class="diff-grid">
+      <div class="diff-row"><div class="diff-label">Çoklu müşteri</div><div class="diff-desc">Tek çalıştırmayla tüm aktif müşteriler işlenir; biri hata verse diğerleri etkilenmez. Her çalışma faturalama için bir log satırı yazar (müşteri, zaman, satır, teslim, hata).</div></div>
+      <div class="diff-row"><div class="diff-label">Tek komutla onboarding</div><div class="diff-desc">Yeni müşteri için manifest, kişiselleştirilmiş başlangıç config'i ve boş bir <span style="font-family:var(--mono)">data/</span> klasörü tek komutla oluşturulur.</div></div>
+      <div class="diff-row"><div class="diff-label">Stripe kill-switch</div><div class="diff-desc">Bir webhook servisi abonelik olaylarını dinler: ödeme başarılı → <span style="font-family:var(--mono)">active: true</span>; ödeme başarısız/iptal → <span style="font-family:var(--mono)">active: false</span>. Sonraki çalıştırmada ödenmemiş müşteriler atlanır. İmza doğrulanır, yalnızca gerçek olaylar işlenir.</div></div>
+      <div class="diff-row"><div class="diff-label">Zamanlanmış çalışma</div><div class="diff-desc">Düz bir CLI olduğu için cron ile aylık/günlük planlanır — raporlar otomatik gider.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <div class="detail-cta">
+      <h3>Dağınık dosyalar, tek temiz rapor</h3>
+      <p>Örnek verilerinizle bir demo rapor üretelim; kendi formatınıza dakikalar içinde uyarlayalım.</p>
+      <a class="cta-btn" href="index.html#contact">İletişime geç</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <div class="foot-links">
+      <a href="index.html#products">Ürünler</a>
+      <a href="index.html#contact">İletişim</a>
+    </div>
+    <span>build: v1.0.0</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  };
+  burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.detail-section, .detail-hero').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+  }
+</script>
+
+</body>
+</html>

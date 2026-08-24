@@ -9,14 +9,22 @@ tanıtım sitesi. Statik HTML/CSS/JS — build adımı ya da harici bağımlıl�
   müşteriye gönderilebilir, white-label bir QA raporu üretilir.
 - **CRM AI Katmanı** (`crm-ai.html`) — mevcut CRM'e bağlanan, dağınık veriyi
   satış ekibinin kullanabileceği çıktılara çeviren salt-okunur zeka katmanı.
+- **Entegrasyon & Otomasyon** (`tool-integration.html`) — araçlar arası veri
+  akışını (Sheets, Slack, Notion, Airtable, Gmail) YAML ile tanımlayıp
+  otomatikleştiren, dedup/retry/hata-uyarısı hazır gelen altyapı.
+- **Excel & Rapor Otomasyonu** (`excel-reports.html`) — dağınık CSV/Excel
+  dosyalarını tek temiz, formatlı bir rapora birleştiren; HTML/PDF, Google
+  Sheets ve e-posta ile teslim eden, çoklu-müşteri/Stripe destekli araç.
 
 ## Sayfalar
 
 | Dosya | İçerik |
 |-------|--------|
-| `index.html` | Ana sayfa: hero, özellik (bento) grid, ürünler, "nasıl çalışır", iletişim |
+| `index.html` | Ana sayfa: hero, özellik (bento) grid, ürünler, "nasıl çalışır", SSS, iletişim |
 | `web-qa.html` | Web QA AI ürün detay sayfası |
 | `crm-ai.html` | CRM AI Katmanı ürün detay sayfası |
+| `tool-integration.html` | Entegrasyon & Otomasyon ürün detay sayfası |
+| `excel-reports.html` | Excel & Rapor Otomasyonu ürün detay sayfası |
 | `style.css` | Ortak tasarım sistemi (koyu, teknik tema) |
 
 ## Tasarım

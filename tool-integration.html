@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entegrasyon & Otomasyon — QAsight</title>
+<meta name="description" content="QAsight Entegrasyon & Otomasyon: araçlar arası veri akışını YAML ile tanımlayıp otomatikleştiren, dedup/retry/hata-uyarısı hazır gelen otomasyon modülü.">
+<meta name="theme-color" content="#0a0d13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0d13'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%2334d399' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="dot"></span>QAsight</a>
+    <div class="nav-right">
+      <a class="navlink" href="index.html#products">Ürünler</a>
+      <a class="navlink" href="index.html#faq">SSS</a>
+      <a class="navlink" href="index.html#contact">İletişim</a>
+      <a class="cta-btn" href="index.html#contact">Demo iste</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="wrap">
+    <a href="index.html#products">Ürünler</a>
+    <a href="index.html#faq">SSS</a>
+    <a href="index.html#contact">İletişim</a>
+    <a class="cta-btn" href="index.html#contact">Demo iste</a>
+  </div>
+</div>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">← Tüm ürünler</a>
+    <span class="card-id">MOD.03 · Aktif</span>
+    <h1>Entegrasyon &amp; Otomasyon</h1>
+    <p class="lede">Araçlar arası veri akışını otomatikleştiren, yeniden kullanılabilir bir otomasyon altyapısı — Google Sheets, Slack, Notion, Airtable ve Gmail arasında "veriyi otomatik taşı" işini yapar. Küçük işletmelerin Zapier veya Make'e ödediği işi, kendi kontrolünüzdeki altyapıda çalıştırır. Entegrasyonlar koda gömülmez; <em>kaynak → (alan eşleme + şablon) → hedef</em> biçiminde YAML ile tanımlanır ve tekrar-önleme, retry, loglama, hata uyarısı ile sağlık kontrolü sizin için halledilir.</p>
+    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);">"Her yeni müşteri entegrasyonu bir kod değişikliği değil, tek bir YAML satırı."</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Nasıl çalışır</h2>
+    <div class="flow">Kaynak (Sheets / Gmail) ─▶ Alan eşleme + Jinja2 şablon ─▶ Hedef (Slack / Notion / Airtable / Sheets)
+                          │
+        dedup · retry · loglama · hata uyarısı · sağlık kontrolü</div>
+    <p style="margin-top:20px;">Bir "pipeline" tek bir cümledir: bir kaynaktan oku, alanları eşle ve bir şablonla biçimlendir, hedefe gönder. Motor gerisini üstlenir — aynı kaydı iki kez göndermez, yalnızca geçici hataları yeniden dener ve bir şey bozulduğunda uyarı düşer.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Kod yok — pipeline'lar YAML ile tanımlanır</h2>
+    <div class="flow">pipelines:
+  - name: sheets_to_slack
+    enabled: true
+    dedup: true                 # yalnızca daha önce görülmemiş kayıtlar
+    source:
+      type: google_sheets
+      spreadsheet_id: ${GOOGLE_SHEET_ID}
+      id_field: Email           # tekrar-önleme anahtarı
+    destination:
+      type: slack
+      template: "Yeni: {{ Name }} &lt;{{ Email }}&gt; — {{ Message }}"</div>
+    <p style="margin-top:20px;">Yeni bir müşteri entegrasyonu eklemek, <span class="key" style="font-family:var(--mono);color:var(--accent)">config/pipelines.yml</span> dosyasına bir blok eklemektir — kod değişmez. Sırlar <span class="key" style="font-family:var(--mono);color:var(--accent)">.env</span> içinde tutulur ve YAML'de <span class="key" style="font-family:var(--mono);color:var(--accent)">${VAR}</span> ile referans verilir; hiçbir şey koda gömülmez.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Bağlanabilen araçlar</h2>
+    <table class="spec-table">
+      <tr><th>Rol</th><th>Servisler</th></tr>
+      <tr><td class="key">Kaynak</td><td>Google Sheets (satır/kayıt okuma), Gmail (sorguya göre gelen kutusu tarama)</td></tr>
+      <tr><td class="key">Hedef</td><td>Slack (webhook veya bot token), Notion (veritabanı sayfası), Airtable (kayıt), Google Sheets (satır ekleme)</td></tr>
+      <tr><td class="key">Genişletme</td><td>Yeni bir servis = küçük bir connector dosyası + kayıt defterine tek satır</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Varsayılan olarak güvenilir</h2>
+    <div class="diff-grid">
+      <div class="diff-row"><div class="diff-label">Tekrar-önleme (idempotency)</div><div class="diff-desc">İşlenen kayıt anahtarları saklanır; bir kayıt yalnızca başarılı gönderimden <em>sonra</em> tamamlandı olarak işaretlenir. Yarıda kalan bir çalışma temiz şekilde yeniden dener, asla çift göndermez.</div></div>
+      <div class="diff-row"><div class="diff-label">Akıllı retry</div><div class="diff-desc">Yalnızca geçici hatalar (429, 5xx, zaman aşımı) üssel backoff ile yeniden denenir; sunucunun <span style="font-family:var(--mono)">Retry-After</span> başlığına uyulur. Kalıcı hatalar (401/403/404) hızlıca başarısız olur.</div></div>
+      <div class="diff-row"><div class="diff-label">Hata uyarısı</div><div class="diff-desc">Bozulan bir pipeline Slack'e uyarı gönderir — sorunu raporlardan değil, anında öğrenirsiniz.</div></div>
+      <div class="diff-row"><div class="diff-label">Sağlık kontrolü</div><div class="diff-desc">Her pipeline'ın son başarı zamanı raporlanır; bir tanesi bayat ya da hatalıysa çıkış kodu sıfırdan farklı döner — izlemeye doğrudan bağlanır.</div></div>
+      <div class="diff-row"><div class="diff-label">DRY_RUN modu</div><div class="diff-desc">Tüm pipeline'lar örnek veriyle, kimlik bilgisi ve ağ olmadan uçtan uca çalıştırılabilir — müşteriye hesap gerektirmeden gösterilebilir.</div></div>
+      <div class="diff-row"><div class="diff-label">Loglama</div><div class="diff-desc">Tutarlı konsol çıktısı; bir ortam değişkeniyle döner (rotating) dosya logu.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Çalıştırma biçimleri</h2>
+    <table class="spec-table">
+      <tr><th>Biçim</th><th>Ne için</th></tr>
+      <tr><td class="key">Tek seferlik</td><td><span style="font-family:var(--mono)">main.py</span> — etkin tüm pipeline'ları bir kez çalıştırır</td></tr>
+      <tr><td class="key">Zamanlanmış</td><td>Belirli aralıklarla otomatik senkron (APScheduler)</td></tr>
+      <tr><td class="key">Gerçek zamanlı</td><td>Webhook dinleyici (FastAPI) — bir form gönderildiği anda tetiklenir</td></tr>
+      <tr><td class="key">Canlı demo</td><td>Yerel bir panoda pipeline'ların çalıştığını canlı gösterir; ekran paylaşımına uygun</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <h2>Güvenlik ve emanet</h2>
+    <p>Müşteri araçlarına erişim güven ister; ürün bunu ciddiye alır.</p>
+    <div class="pill-list">
+      <span class="pill">Sırlar .env içinde, git-ignore</span>
+      <span class="pill">Kimlik bilgisi koda gömülmez</span>
+      <span class="pill">En az yetki (least privilege)</span>
+      <span class="pill">Commit'te sır taraması</span>
+      <span class="pill">DRY_RUN ile ağsız deneme</span>
+      <span class="pill">Docker ile taşınabilir kurulum</span>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="wrap">
+    <div class="detail-cta">
+      <h3>Araçlarınız birbiriyle konuşsun</h3>
+      <p>Tekrarlayan kopyala-yapıştır işini bir pipeline'a çevirelim — önce DRY_RUN ile gösterelim.</p>
+      <a class="cta-btn" href="index.html#contact">İletişime geç</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <div class="foot-links">
+      <a href="index.html#products">Ürünler</a>
+      <a href="index.html#contact">İletişim</a>
+    </div>
+    <span>build: v1.0.0</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  };
+  burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.detail-section, .detail-hero').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+  }
+</script>
+
+</body>
+</html>

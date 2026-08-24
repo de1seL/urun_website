@@ -47,7 +47,7 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <div class="eyebrow reveal">sistem aktif · 2 modül canlı</div>
+      <div class="eyebrow reveal">sistem aktif · 4 modül canlı</div>
       <h1 class="reveal" style="--d:.05s">Kaliteyi <span class="accent">görünür</span> kılıyoruz.</h1>
       <p class="hero-sub reveal" style="--d:.1s">QAsight, web ajanslarının ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
       <div class="hero-actions reveal" style="--d:.15s">
@@ -55,9 +55,9 @@
         <a class="btn-outline" href="#products">Modülleri gör</a>
       </div>
       <div class="hero-meta reveal" style="--d:.2s">
-        <div><div class="num" data-count="2">0</div><div class="label">aktif ürün</div></div>
+        <div><div class="num" data-count="4">0</div><div class="label">aktif modül</div></div>
         <div><div class="num" data-count="60" data-suffix="+">0</div><div class="label">otomatik QA kontrolü</div></div>
-        <div><div class="num" data-count="4">0</div><div class="label">CRM zeka görevi</div></div>
+        <div><div class="num" data-count="5" data-suffix="+">0</div><div class="label">bağlı araç &amp; format</div></div>
       </div>
     </div>
 
@@ -138,7 +138,7 @@
     <div class="section-head reveal">
       <span class="section-tag">/ürünler</span>
       <h2>Modül kütüphanesi</h2>
-      <p>Her modül tek bir işi çok iyi yapmak için tasarlandı. Birini ya da ikisini birden kullanın.</p>
+      <p>Her modül tek bir işi çok iyi yapmak için tasarlandı. Birini seçin ya da hepsini birlikte kullanın.</p>
     </div>
     <div class="product-grid two-col">
 
@@ -160,6 +160,28 @@
         <h3>CRM AI Katmanı</h3>
         <p>Şirketin mevcut CRM'ine bağlanan, içindeki dağınık veriyi okuyup satış ekibinin kullanabileceği çıktılara çeviren bir yapay zeka katmanı. CRM'in yerini almaz, kayıt tutmaz — yalnızca salt-okunur bir yorumlama katmanıdır.</p>
         <div class="tags"><span class="tag">CRM entegrasyonu</span><span class="tag">Satış zekası</span><span class="tag">Salt-okunur</span><span class="tag">HubSpot desteği</span></div>
+        <span class="card-more">Detayları gör ↗</span>
+      </div>
+      </a>
+
+      <a class="card-link reveal" href="tool-integration.html" style="--d:.16s">
+      <div class="card glow">
+        <div class="card-top"><span class="card-id">MOD.03</span><span class="card-status">Aktif</span></div>
+        <div class="card-icon">⇄</div>
+        <h3>Entegrasyon &amp; Otomasyon</h3>
+        <p>Araçlar arası veri akışını otomatikleştirir — Google Sheets, Slack, Notion, Airtable ve Gmail arasında. Entegrasyonlar kod yerine YAML ile tanımlanır; tekrar-önleme, akıllı retry, hata uyarısı ve sağlık kontrolü hazır gelir. Küçük işletmelerin Zapier/Make'e ödediği işi kendi altyapınızda yapar.</p>
+        <div class="tags"><span class="tag">YAML pipeline</span><span class="tag">Dedup &amp; retry</span><span class="tag">Slack · Notion · Airtable</span><span class="tag">DRY_RUN</span></div>
+        <span class="card-more">Detayları gör ↗</span>
+      </div>
+      </a>
+
+      <a class="card-link reveal" href="excel-reports.html" style="--d:.24s">
+      <div class="card glow">
+        <div class="card-top"><span class="card-id">MOD.04</span><span class="card-status">Aktif</span></div>
+        <div class="card-icon">▦</div>
+        <h3>Excel &amp; Rapor Otomasyonu</h3>
+        <p>Dağınık bir klasör dolusu CSV/Excel dosyasını tek, temiz ve formatlı bir rapora birleştirir. Karışık tarih ve para formatlarını normalize eder, özetleri çıkarır ve renkli başlıklar, grafik ve "sorunlar" sayfasıyla .xlsx üretir — istenirse HTML/PDF, Google Sheets ve e-posta ile teslim eder.</p>
+        <div class="tags"><span class="tag">CSV/Excel birleştirme</span><span class="tag">Otomatik özet</span><span class="tag">Formatlı .xlsx</span><span class="tag">Stripe abonelik</span></div>
         <span class="card-more">Detayları gör ↗</span>
       </div>
       </a>
@@ -252,7 +274,7 @@
 
 <script>
   /* marquee */
-  const items = ["web_qa.scan(url)", "web_qa.generate_report()", "crm_ai.briefing(customer)", "crm_ai.detect_stale_deals()", "crm_ai.weekly_summary()", "web_qa.client_email()"];
+  const items = ["web_qa.scan(url)", "web_qa.generate_report()", "crm_ai.briefing(customer)", "crm_ai.detect_stale_deals()", "integrate.sheets_to_slack()", "integrate.pipeline.run(dry_run)", "reports.merge(folder)", "reports.export_xlsx()", "crm_ai.weekly_summary()", "web_qa.client_email()"];
   const marquee = document.getElementById('marquee');
   const full = [...items, ...items];
   full.forEach(t => {
