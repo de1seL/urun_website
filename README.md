@@ -30,6 +30,14 @@ tanıtım sitesi. Statik HTML/CSS/JS — build adımı ya da harici bağımlıl�
 | `excel-reports.html` | Excel & Rapor Otomasyonu ürün detay sayfası |
 | `n8n-automation.html` | Müşteri Bazlı İş Akışı (self-host n8n) detay sayfası |
 | `style.css` | Ortak tasarım sistemi (koyu, teknik tema) |
+| `i18n.js` | Dil (TR/EN) motoru — sağ üstteki seçici tüm metinleri çevirir |
+
+## Diller
+
+Sağ üstteki **TR / EN** seçici tüm site metinlerini çevirir. Türkçe kaynak dildir
+(HTML'de yazılı); İngilizce metinler her sayfadaki `PAGE_I18N` bloğunda + ortak
+metinler `i18n.js` içinde tutulur. Çevrilecek her öğe `data-i18n="anahtar"` taşır;
+seçim tarayıcıda (`localStorage`) hatırlanır ve `<html lang>` güncellenir.
 
 ## Tasarım
 

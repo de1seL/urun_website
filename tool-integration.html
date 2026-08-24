@@ -18,47 +18,55 @@
   <div class="wrap">
     <a class="logo" href="index.html"><span class="dot"></span>QAsight</a>
     <div class="nav-right">
-      <a class="navlink" href="index.html#products">Ürünler</a>
-      <a class="navlink" href="index.html#faq">SSS</a>
-      <a class="navlink" href="index.html#contact">İletişim</a>
-      <a class="cta-btn" href="index.html#contact">Demo iste</a>
+      <a class="navlink" href="index.html#products" data-i18n="nav.products">Ürünler</a>
+      <a class="navlink" href="index.html#faq" data-i18n="nav.faq">SSS</a>
+      <a class="navlink" href="index.html#contact" data-i18n="nav.contact">İletişim</a>
+      <a class="cta-btn" href="index.html#contact" data-i18n="nav.demo">Demo iste</a>
+      <div class="lang-switch" role="group" aria-label="Dil / Language">
+        <button class="lang-btn" data-lang="tr" type="button">TR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <div class="wrap">
-    <a href="index.html#products">Ürünler</a>
-    <a href="index.html#faq">SSS</a>
-    <a href="index.html#contact">İletişim</a>
-    <a class="cta-btn" href="index.html#contact">Demo iste</a>
+    <div class="lang-switch" role="group" aria-label="Dil / Language">
+      <button class="lang-btn" data-lang="tr" type="button">TR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <a href="index.html#products" data-i18n="nav.products">Ürünler</a>
+    <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
+    <a href="index.html#contact" data-i18n="nav.contact">İletişim</a>
+    <a class="cta-btn" href="index.html#contact" data-i18n="nav.demo">Demo iste</a>
   </div>
 </div>
 
 <header class="detail-hero">
   <div class="wrap">
-    <a class="back-link" href="index.html">← Tüm ürünler</a>
-    <span class="card-id">MOD.03 · Aktif</span>
-    <h1>Entegrasyon &amp; Otomasyon</h1>
-    <p class="lede">Araçlar arası veri akışını otomatikleştiren, yeniden kullanılabilir bir otomasyon altyapısı — Google Sheets, Slack, Notion, Airtable ve Gmail arasında "veriyi otomatik taşı" işini yapar. Küçük işletmelerin Zapier veya Make'e ödediği işi, kendi kontrolünüzdeki altyapıda çalıştırır. Entegrasyonlar koda gömülmez; <em>kaynak → (alan eşleme + şablon) → hedef</em> biçiminde YAML ile tanımlanır ve tekrar-önleme, retry, loglama, hata uyarısı ile sağlık kontrolü sizin için halledilir.</p>
-    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);">"Her yeni müşteri entegrasyonu bir kod değişikliği değil, tek bir YAML satırı."</p>
+    <a class="back-link" href="index.html" data-i18n="common.back">← Tüm ürünler</a>
+    <span class="card-id" data-i18n="ti.id">MOD.03 · Aktif</span>
+    <h1 data-i18n="ti.h1">Entegrasyon &amp; Otomasyon</h1>
+    <p class="lede" data-i18n="ti.lede">Araçlar arası veri akışını otomatikleştiren, yeniden kullanılabilir bir otomasyon altyapısı — Google Sheets, Slack, Notion, Airtable ve Gmail arasında "veriyi otomatik taşı" işini yapar. Küçük işletmelerin Zapier veya Make'e ödediği işi, kendi kontrolünüzdeki altyapıda çalıştırır. Entegrasyonlar koda gömülmez; <em>kaynak → (alan eşleme + şablon) → hedef</em> biçiminde YAML ile tanımlanır ve tekrar-önleme, retry, loglama, hata uyarısı ile sağlık kontrolü sizin için halledilir.</p>
+    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);" data-i18n="ti.quote">"Her yeni müşteri entegrasyonu bir kod değişikliği değil, tek bir YAML satırı."</p>
   </div>
 </header>
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Nasıl çalışır</h2>
-    <div class="flow">Kaynak (Sheets / Gmail) ─▶ Alan eşleme + Jinja2 şablon ─▶ Hedef (Slack / Notion / Airtable / Sheets)
+    <h2 data-i18n="ti.s1h">Nasıl çalışır</h2>
+    <div class="flow" data-i18n="ti.flow1">Kaynak (Sheets / Gmail) ─▶ Alan eşleme + Jinja2 şablon ─▶ Hedef (Slack / Notion / Airtable / Sheets)
                           │
         dedup · retry · loglama · hata uyarısı · sağlık kontrolü</div>
-    <p style="margin-top:20px;">Bir "pipeline" tek bir cümledir: bir kaynaktan oku, alanları eşle ve bir şablonla biçimlendir, hedefe gönder. Motor gerisini üstlenir — aynı kaydı iki kez göndermez, yalnızca geçici hataları yeniden dener ve bir şey bozulduğunda uyarı düşer.</p>
+    <p style="margin-top:20px;" data-i18n="ti.s1p">Bir "pipeline" tek bir cümledir: bir kaynaktan oku, alanları eşle ve bir şablonla biçimlendir, hedefe gönder. Motor gerisini üstlenir — aynı kaydı iki kez göndermez, yalnızca geçici hataları yeniden dener ve bir şey bozulduğunda uyarı düşer.</p>
   </div>
 </section>
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Kod yok — pipeline'lar YAML ile tanımlanır</h2>
-    <div class="flow">pipelines:
+    <h2 data-i18n="ti.s2h">Kod yok — pipeline'lar YAML ile tanımlanır</h2>
+    <div class="flow" data-i18n="ti.flow2">pipelines:
   - name: sheets_to_slack
     enabled: true
     dedup: true                 # yalnızca daha önce görülmemiş kayıtlar
@@ -69,14 +77,14 @@
     destination:
       type: slack
       template: "Yeni: {{ Name }} &lt;{{ Email }}&gt; — {{ Message }}"</div>
-    <p style="margin-top:20px;">Yeni bir müşteri entegrasyonu eklemek, <span class="key" style="font-family:var(--mono);color:var(--accent)">config/pipelines.yml</span> dosyasına bir blok eklemektir — kod değişmez. Sırlar <span class="key" style="font-family:var(--mono);color:var(--accent)">.env</span> içinde tutulur ve YAML'de <span class="key" style="font-family:var(--mono);color:var(--accent)">${VAR}</span> ile referans verilir; hiçbir şey koda gömülmez.</p>
+    <p style="margin-top:20px;" data-i18n="ti.s2p">Yeni bir müşteri entegrasyonu eklemek, <span class="key" style="font-family:var(--mono);color:var(--accent)">config/pipelines.yml</span> dosyasına bir blok eklemektir — kod değişmez. Sırlar <span class="key" style="font-family:var(--mono);color:var(--accent)">.env</span> içinde tutulur ve YAML'de <span class="key" style="font-family:var(--mono);color:var(--accent)">${VAR}</span> ile referans verilir; hiçbir şey koda gömülmez.</p>
   </div>
 </section>
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Bağlanabilen araçlar</h2>
-    <table class="spec-table">
+    <h2 data-i18n="ti.s3h">Bağlanabilen araçlar</h2>
+    <table class="spec-table" data-i18n="ti.tbl1">
       <tr><th>Rol</th><th>Servisler</th></tr>
       <tr><td class="key">Kaynak</td><td>Google Sheets (satır/kayıt okuma), Gmail (sorguya göre gelen kutusu tarama)</td></tr>
       <tr><td class="key">Hedef</td><td>Slack (webhook veya bot token), Notion (veritabanı sayfası), Airtable (kayıt), Google Sheets (satır ekleme)</td></tr>
@@ -87,8 +95,8 @@
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Varsayılan olarak güvenilir</h2>
-    <div class="diff-grid">
+    <h2 data-i18n="ti.s4h">Varsayılan olarak güvenilir</h2>
+    <div class="diff-grid" data-i18n="ti.grid">
       <div class="diff-row"><div class="diff-label">Tekrar-önleme (idempotency)</div><div class="diff-desc">İşlenen kayıt anahtarları saklanır; bir kayıt yalnızca başarılı gönderimden <em>sonra</em> tamamlandı olarak işaretlenir. Yarıda kalan bir çalışma temiz şekilde yeniden dener, asla çift göndermez.</div></div>
       <div class="diff-row"><div class="diff-label">Akıllı retry</div><div class="diff-desc">Yalnızca geçici hatalar (429, 5xx, zaman aşımı) üssel backoff ile yeniden denenir; sunucunun <span style="font-family:var(--mono)">Retry-After</span> başlığına uyulur. Kalıcı hatalar (401/403/404) hızlıca başarısız olur.</div></div>
       <div class="diff-row"><div class="diff-label">Hata uyarısı</div><div class="diff-desc">Bozulan bir pipeline Slack'e uyarı gönderir — sorunu raporlardan değil, anında öğrenirsiniz.</div></div>
@@ -101,8 +109,8 @@
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Çalıştırma biçimleri</h2>
-    <table class="spec-table">
+    <h2 data-i18n="ti.s5h">Çalıştırma biçimleri</h2>
+    <table class="spec-table" data-i18n="ti.tbl2">
       <tr><th>Biçim</th><th>Ne için</th></tr>
       <tr><td class="key">Tek seferlik</td><td><span style="font-family:var(--mono)">main.py</span> — etkin tüm pipeline'ları bir kez çalıştırır</td></tr>
       <tr><td class="key">Zamanlanmış</td><td>Belirli aralıklarla otomatik senkron (APScheduler)</td></tr>
@@ -114,9 +122,9 @@
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Güvenlik ve emanet</h2>
-    <p>Müşteri araçlarına erişim güven ister; ürün bunu ciddiye alır.</p>
-    <div class="pill-list">
+    <h2 data-i18n="ti.s6h">Güvenlik ve emanet</h2>
+    <p data-i18n="ti.s6p">Müşteri araçlarına erişim güven ister; ürün bunu ciddiye alır.</p>
+    <div class="pill-list" data-i18n="ti.pills">
       <span class="pill">Sırlar .env içinde, git-ignore</span>
       <span class="pill">Kimlik bilgisi koda gömülmez</span>
       <span class="pill">En az yetki (least privilege)</span>
@@ -130,21 +138,21 @@
 <section class="detail-section">
   <div class="wrap">
     <div class="detail-cta">
-      <h3>Araçlarınız birbiriyle konuşsun</h3>
-      <p>Tekrarlayan kopyala-yapıştır işini bir pipeline'a çevirelim — önce DRY_RUN ile gösterelim.</p>
-      <a class="cta-btn" href="index.html#contact">İletişime geç</a>
+      <h3 data-i18n="ti.ctah">Araçlarınız birbiriyle konuşsun</h3>
+      <p data-i18n="ti.ctap">Tekrarlayan kopyala-yapıştır işini bir pipeline'a çevirelim — önce DRY_RUN ile gösterelim.</p>
+      <a class="cta-btn" href="index.html#contact" data-i18n="common.contact">İletişime geç</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <span data-i18n="foot.rights">© 2026 QAsight — tüm modüller korunmaktadır</span>
     <div class="foot-links">
-      <a href="index.html#products">Ürünler</a>
-      <a href="index.html#contact">İletişim</a>
+      <a href="index.html#products" data-i18n="foot.products">Ürünler</a>
+      <a href="index.html#contact" data-i18n="foot.contact">İletişim</a>
     </div>
-    <span>build: v1.0.0</span>
+    <span data-i18n="foot.build">build: v1.0.0</span>
   </div>
 </footer>
 
@@ -172,6 +180,63 @@
     document.querySelectorAll('.detail-section, .detail-hero').forEach(el => { el.classList.add('reveal'); io.observe(el); });
   }
 </script>
+
+<script>
+window.PAGE_I18N = {
+  "doc.title": "Integration & Automation — QAsight",
+  "ti.id": "MOD.03 · Active",
+  "ti.h1": "Integration &amp; Automation",
+  "ti.lede": `A reusable automation layer that automates data flow between tools — it does the "move data automatically" job across Google Sheets, Slack, Notion, Airtable and Gmail. It runs the work small businesses pay Zapier or Make for, on infrastructure you control. Integrations aren't buried in code; they're defined in YAML as <em>source → (field mapping + template) → destination</em>, and dedup, retry, logging, failure alerts and health checks are handled for you.`,
+  "ti.quote": `"Every new customer integration isn't a code change, but a single YAML line."`,
+  "ti.s1h": "How it works",
+  "ti.flow1": `Source (Sheets / Gmail) ─▶ Field mapping + Jinja2 template ─▶ Destination (Slack / Notion / Airtable / Sheets)
+                          │
+        dedup · retry · logging · failure alert · health check`,
+  "ti.s1p": "A \"pipeline\" is a single sentence: read from a source, map the fields and format with a template, send to the destination. The engine handles the rest — it won't send the same record twice, retries only transient errors, and raises an alert when something breaks.",
+  "ti.s2h": "No code — pipelines are defined in YAML",
+  "ti.flow2": `pipelines:
+  - name: sheets_to_slack
+    enabled: true
+    dedup: true                 # only records not seen before
+    source:
+      type: google_sheets
+      spreadsheet_id: \${GOOGLE_SHEET_ID}
+      id_field: Email           # dedup key
+    destination:
+      type: slack
+      template: "New: {{ Name }} &lt;{{ Email }}&gt; — {{ Message }}"`,
+  "ti.s2p": `Adding a new customer integration means adding a block to <span class="key" style="font-family:var(--mono);color:var(--accent)">config/pipelines.yml</span> — no code changes. Secrets live in <span class="key" style="font-family:var(--mono);color:var(--accent)">.env</span> and are referenced in YAML via <span class="key" style="font-family:var(--mono);color:var(--accent)">\${VAR}</span>; nothing is hard-coded.`,
+  "ti.s3h": "Connectable tools",
+  "ti.tbl1": `<tr><th>Role</th><th>Services</th></tr>
+      <tr><td class="key">Source</td><td>Google Sheets (read rows/records), Gmail (scan inbox by query)</td></tr>
+      <tr><td class="key">Destination</td><td>Slack (webhook or bot token), Notion (database page), Airtable (record), Google Sheets (append row)</td></tr>
+      <tr><td class="key">Extension</td><td>A new service = a small connector file + one line in the registry</td></tr>`,
+  "ti.s4h": "Trustworthy by default",
+  "ti.grid": `<div class="diff-row"><div class="diff-label">Idempotency</div><div class="diff-desc">Processed record keys are stored; a record is marked done only <em>after</em> a successful send. An interrupted run retries cleanly and never double-sends.</div></div>
+      <div class="diff-row"><div class="diff-label">Smart retry</div><div class="diff-desc">Only transient errors (429, 5xx, timeouts) are retried with exponential backoff; the server's <span style="font-family:var(--mono)">Retry-After</span> header is respected. Permanent errors (401/403/404) fail fast.</div></div>
+      <div class="diff-row"><div class="diff-label">Failure alert</div><div class="diff-desc">A broken pipeline sends an alert to Slack — you learn about the problem instantly, not from reports.</div></div>
+      <div class="diff-row"><div class="diff-label">Health check</div><div class="diff-desc">Each pipeline's last success time is reported; if one is stale or failing the exit code is non-zero — plugs straight into monitoring.</div></div>
+      <div class="diff-row"><div class="diff-label">DRY_RUN mode</div><div class="diff-desc">All pipelines can run end-to-end on sample data, with no credentials and no network — demoable to a customer without any accounts.</div></div>
+      <div class="diff-row"><div class="diff-label">Logging</div><div class="diff-desc">Consistent console output; a rotating file log via one environment variable.</div></div>`,
+  "ti.s5h": "Run modes",
+  "ti.tbl2": `<tr><th>Mode</th><th>What for</th></tr>
+      <tr><td class="key">One-off</td><td><span style="font-family:var(--mono)">main.py</span> — runs all enabled pipelines once</td></tr>
+      <tr><td class="key">Scheduled</td><td>Automatic sync at set intervals (APScheduler)</td></tr>
+      <tr><td class="key">Real-time</td><td>Webhook listener (FastAPI) — triggers the moment a form is submitted</td></tr>
+      <tr><td class="key">Live demo</td><td>Shows pipelines running live on a local dashboard; ideal for screen sharing</td></tr>`,
+  "ti.s6h": "Security & trust",
+  "ti.s6p": "Access to customer tools requires trust; the product takes that seriously.",
+  "ti.pills": `<span class="pill">Secrets in .env, git-ignored</span>
+      <span class="pill">No hard-coded credentials</span>
+      <span class="pill">Least privilege</span>
+      <span class="pill">Secret scan on commit</span>
+      <span class="pill">Networkless trial via DRY_RUN</span>
+      <span class="pill">Portable setup with Docker</span>`,
+  "ti.ctah": "Let your tools talk to each other",
+  "ti.ctap": "Let's turn that repetitive copy-paste job into a pipeline — first shown via DRY_RUN."
+};
+</script>
+<script src="i18n.js"></script>
 
 </body>
 </html>
