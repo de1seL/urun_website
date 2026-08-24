@@ -19,45 +19,53 @@
 </head>
 <body>
 
-<a class="skip-link" href="#products">İçeriğe geç</a>
+<a class="skip-link" href="#products" data-i18n="skip">İçeriğe geç</a>
 
 <nav id="nav">
   <div class="wrap">
     <div class="logo"><span class="dot"></span>QAsight</div>
     <div class="nav-right">
-      <a class="navlink" href="#products">Ürünler</a>
-      <a class="navlink" href="#features">Özellikler</a>
-      <a class="navlink" href="#how">Nasıl çalışır</a>
-      <a class="navlink" href="#faq">SSS</a>
-      <a class="cta-btn" href="#contact">Demo iste</a>
+      <a class="navlink" href="#products" data-i18n="nav.products">Ürünler</a>
+      <a class="navlink" href="#features" data-i18n="nav.features">Özellikler</a>
+      <a class="navlink" href="#how" data-i18n="nav.how">Nasıl çalışır</a>
+      <a class="navlink" href="#faq" data-i18n="nav.faq">SSS</a>
+      <a class="cta-btn" href="#contact" data-i18n="nav.demo">Demo iste</a>
+      <div class="lang-switch" role="group" aria-label="Dil / Language">
+        <button class="lang-btn" data-lang="tr" type="button">TR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <div class="wrap">
-    <a href="#products">Ürünler</a>
-    <a href="#features">Özellikler</a>
-    <a href="#how">Nasıl çalışır</a>
-    <a href="#faq">SSS</a>
-    <a class="cta-btn" href="#contact">Demo iste</a>
+    <div class="lang-switch" role="group" aria-label="Dil / Language">
+      <button class="lang-btn" data-lang="tr" type="button">TR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <a href="#products" data-i18n="nav.products">Ürünler</a>
+    <a href="#features" data-i18n="nav.features">Özellikler</a>
+    <a href="#how" data-i18n="nav.how">Nasıl çalışır</a>
+    <a href="#faq" data-i18n="nav.faq">SSS</a>
+    <a class="cta-btn" href="#contact" data-i18n="nav.demo">Demo iste</a>
   </div>
 </div>
 
 <header class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <div class="eyebrow reveal">sistem aktif · 5 modül canlı</div>
-      <h1 class="reveal" style="--d:.05s">Kaliteyi <span class="accent">görünür</span> kılıyoruz.</h1>
-      <p class="hero-sub reveal" style="--d:.1s">QAsight, web ajanslarının ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
+      <div class="eyebrow reveal" data-i18n="hero.eyebrow">sistem aktif · 5 modül canlı</div>
+      <h1 class="reveal" style="--d:.05s" data-i18n="hero.h1">Kaliteyi <span class="accent">görünür</span> kılıyoruz.</h1>
+      <p class="hero-sub reveal" style="--d:.1s" data-i18n="hero.sub">QAsight, web ajanslarının ve satış ekiplerinin günlük iş akışına doğrudan giren yapay zeka modülleri geliştirir: siteleri otomatik denetler, CRM'inizi okur ve önemli olanı öne çıkarır.</p>
       <div class="hero-actions reveal" style="--d:.15s">
-        <a class="cta-btn" href="#contact">Ücretsiz demo iste →</a>
-        <a class="btn-outline" href="#products">Modülleri gör</a>
+        <a class="cta-btn" href="#contact" data-i18n="hero.cta">Ücretsiz demo iste →</a>
+        <a class="btn-outline" href="#products" data-i18n="hero.modules">Modülleri gör</a>
       </div>
       <div class="hero-meta reveal" style="--d:.2s">
-        <div><div class="num" data-count="5">0</div><div class="label">aktif modül</div></div>
-        <div><div class="num" data-count="60" data-suffix="+">0</div><div class="label">otomatik QA kontrolü</div></div>
-        <div><div class="num" data-count="5" data-suffix="+">0</div><div class="label">bağlı araç &amp; format</div></div>
+        <div><div class="num" data-count="5">0</div><div class="label" data-i18n="hero.m1">aktif modül</div></div>
+        <div><div class="num" data-count="60" data-suffix="+">0</div><div class="label" data-i18n="hero.m2">otomatik QA kontrolü</div></div>
+        <div><div class="num" data-count="5" data-suffix="+">0</div><div class="label" data-i18n="hero.m3">bağlı araç &amp; format</div></div>
       </div>
     </div>
 
@@ -66,23 +74,23 @@
         <div class="report-head">
           <span class="traffic"><i></i><i></i><i></i></span>
           <span class="url">qasight · scan("novadesign.co")</span>
-          <span class="live">canlı</span>
+          <span class="live" data-i18n="rc.live">canlı</span>
         </div>
         <div class="report-score">
           <div class="score-ring"><b>82</b></div>
           <div class="label">
-            <small>sağlık skoru</small>
-            <strong>İyi — 4 hızlı kazanım</strong>
+            <small data-i18n="rc.score">sağlık skoru</small>
+            <strong data-i18n="rc.state">İyi — 4 hızlı kazanım</strong>
           </div>
         </div>
         <div class="report-rows">
-          <div class="report-row ok"><span class="mark">✓</span><span class="txt">SSL sertifikası geçerli</span><span class="meta">218 gün</span></div>
-          <div class="report-row ok"><span class="mark">✓</span><span class="txt">Mobil uyumlu · viewport</span><span class="meta">OK</span></div>
-          <div class="report-row warn"><span class="mark">!</span><span class="txt">En büyük içerik geç yükleniyor</span><span class="meta">LCP 4.2s</span></div>
-          <div class="report-row err"><span class="mark">✕</span><span class="txt">Kırık iç bağlantı</span><span class="meta">3 adet</span></div>
-          <div class="report-row warn"><span class="mark">!</span><span class="txt">Çerez onayı bulunamadı</span><span class="meta">KVKK</span></div>
+          <div class="report-row ok"><span class="mark">✓</span><span class="txt" data-i18n="rc.r1">SSL sertifikası geçerli</span><span class="meta" data-i18n="rc.r1m">218 gün</span></div>
+          <div class="report-row ok"><span class="mark">✓</span><span class="txt" data-i18n="rc.r2">Mobil uyumlu · viewport</span><span class="meta">OK</span></div>
+          <div class="report-row warn"><span class="mark">!</span><span class="txt" data-i18n="rc.r3">En büyük içerik geç yükleniyor</span><span class="meta">LCP 4.2s</span></div>
+          <div class="report-row err"><span class="mark">✕</span><span class="txt" data-i18n="rc.r4">Kırık iç bağlantı</span><span class="meta" data-i18n="rc.r4m">3 adet</span></div>
+          <div class="report-row warn"><span class="mark">!</span><span class="txt" data-i18n="rc.r5">Çerez onayı bulunamadı</span><span class="meta" data-i18n="rc.r5m">KVKK</span></div>
         </div>
-        <div class="report-foot">→ white-label rapor + müşteri e-postası hazır</div>
+        <div class="report-foot" data-i18n="rc.foot">→ white-label rapor + müşteri e-postası hazır</div>
       </div>
     </div>
   </div>
@@ -98,35 +106,35 @@
 <section id="features">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-tag">/neden QAsight</span>
-      <h2>Teknik sonuçları, iş diline çeviren bir zeka katmanı</h2>
-      <p>Modüllerimiz mevcut araçlarınızın yerini almaz — üzerine oturur, veriyi okur ve karar verebileceğiniz çıktıya dönüştürür.</p>
+      <span class="section-tag" data-i18n="feat.tag">/neden QAsight</span>
+      <h2 data-i18n="feat.h2">Teknik sonuçları, iş diline çeviren bir zeka katmanı</h2>
+      <p data-i18n="feat.p">Modüllerimiz mevcut araçlarınızın yerini almaz — üzerine oturur, veriyi okur ve karar verebileceğiniz çıktıya dönüştürür.</p>
     </div>
     <div class="bento">
       <div class="bento-item wide reveal glow" style="--d:0s">
         <div class="bento-icon">◈</div>
-        <h3>Otomatik denetim</h3>
-        <p>Bir URL girin; 60'tan fazla kontrol saniyeler içinde çalışır. Performans, erişilebilirlik, SEO ve KVKK bulguları önem ve efora göre sıralanır.</p>
+        <h3 data-i18n="feat.b1h">Otomatik denetim</h3>
+        <p data-i18n="feat.b1p">Bir URL girin; 60'tan fazla kontrol saniyeler içinde çalışır. Performans, erişilebilirlik, SEO ve KVKK bulguları önem ve efora göre sıralanır.</p>
       </div>
       <div class="bento-item half reveal glow" style="--d:.05s">
         <div class="bento-icon">◎</div>
-        <h3>Salt-okunur güven</h3>
-        <p>CRM katmanı hiçbir kaydı değiştirmez. Yalnızca okur, yorumlar ve satış ekibine hazır brifing çıkarır.</p>
+        <h3 data-i18n="feat.b2h">Salt-okunur güven</h3>
+        <p data-i18n="feat.b2p">CRM katmanı hiçbir kaydı değiştirmez. Yalnızca okur, yorumlar ve satış ekibine hazır brifing çıkarır.</p>
       </div>
       <div class="bento-item third reveal glow" style="--d:.1s">
         <div class="bento-icon">⌘</div>
-        <h3>White-label</h3>
-        <p>Raporlar sizin markanızla, müşteriye gönderilebilir formatta.</p>
+        <h3 data-i18n="feat.b3h">White-label</h3>
+        <p data-i18n="feat.b3p">Raporlar sizin markanızla, müşteriye gönderilebilir formatta.</p>
       </div>
       <div class="bento-item third reveal glow" style="--d:.15s">
         <div class="bento-icon">✳</div>
-        <h3>İnsan dili</h3>
-        <p>Teknik jargon yerine müşterinin anlayacağı açıklamalar.</p>
+        <h3 data-i18n="feat.b4h">İnsan dili</h3>
+        <p data-i18n="feat.b4p">Teknik jargon yerine müşterinin anlayacağı açıklamalar.</p>
       </div>
       <div class="bento-item third reveal glow" style="--d:.2s">
         <div class="bento-icon">⚡</div>
-        <h3>Hızlı entegrasyon</h3>
-        <p>HubSpot ve yaygın CRM'lerle dakikalar içinde bağlanır.</p>
+        <h3 data-i18n="feat.b5h">Hızlı entegrasyon</h3>
+        <p data-i18n="feat.b5p">HubSpot ve yaygın CRM'lerle dakikalar içinde bağlanır.</p>
       </div>
     </div>
   </div>
@@ -136,64 +144,64 @@
 <section id="products">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-tag">/ürünler</span>
-      <h2>Modül kütüphanesi</h2>
-      <p>Her modül tek bir işi çok iyi yapmak için tasarlandı. Birini seçin ya da hepsini birlikte kullanın.</p>
+      <span class="section-tag" data-i18n="prod.tag">/ürünler</span>
+      <h2 data-i18n="prod.h2">Modül kütüphanesi</h2>
+      <p data-i18n="prod.p">Her modül tek bir işi çok iyi yapmak için tasarlandı. Birini seçin ya da hepsini birlikte kullanın.</p>
     </div>
     <div class="product-grid two-col">
 
       <a class="card-link reveal" href="web-qa.html" style="--d:0s">
       <div class="card glow">
-        <div class="card-top"><span class="card-id">MOD.01</span><span class="card-status">Aktif</span></div>
+        <div class="card-top"><span class="card-id">MOD.01</span><span class="card-status" data-i18n="common.active">Aktif</span></div>
         <div class="card-icon">◈</div>
-        <h3>Web QA AI Hizmeti</h3>
-        <p>Web ajanslarının müşteri sitelerini otomatik test edip müşteriye gönderilebilir profesyonel QA raporu üretmesini sağlar. Bir URL girilir, 60'tan fazla kontrol çalışır; bulgular önem ve efora göre sıralanır ve yapay zeka teknik sonuçları müşteri diliyle açıklar.</p>
-        <div class="tags"><span class="tag">QA otomasyonu</span><span class="tag">SEO &amp; performans</span><span class="tag">KVKK denetimi</span><span class="tag">White-label rapor</span></div>
-        <span class="card-more">Detayları gör ↗</span>
+        <h3 data-i18n="prod.p1h">Web QA AI Hizmeti</h3>
+        <p data-i18n="prod.p1p">Web ajanslarının müşteri sitelerini otomatik test edip müşteriye gönderilebilir profesyonel QA raporu üretmesini sağlar. Bir URL girilir, 60'tan fazla kontrol çalışır; bulgular önem ve efora göre sıralanır ve yapay zeka teknik sonuçları müşteri diliyle açıklar.</p>
+        <div class="tags"><span class="tag" data-i18n="prod.p1t1">QA otomasyonu</span><span class="tag" data-i18n="prod.p1t2">SEO &amp; performans</span><span class="tag" data-i18n="prod.p1t3">KVKK denetimi</span><span class="tag" data-i18n="prod.p1t4">White-label rapor</span></div>
+        <span class="card-more" data-i18n="common.details">Detayları gör ↗</span>
       </div>
       </a>
 
       <a class="card-link reveal" href="crm-ai.html" style="--d:.08s">
       <div class="card glow">
-        <div class="card-top"><span class="card-id">MOD.02</span><span class="card-status">Aktif</span></div>
+        <div class="card-top"><span class="card-id">MOD.02</span><span class="card-status" data-i18n="common.active">Aktif</span></div>
         <div class="card-icon">◎</div>
-        <h3>CRM AI Katmanı</h3>
-        <p>Şirketin mevcut CRM'ine bağlanan, içindeki dağınık veriyi okuyup satış ekibinin kullanabileceği çıktılara çeviren bir yapay zeka katmanı. CRM'in yerini almaz, kayıt tutmaz — yalnızca salt-okunur bir yorumlama katmanıdır.</p>
-        <div class="tags"><span class="tag">CRM entegrasyonu</span><span class="tag">Satış zekası</span><span class="tag">Salt-okunur</span><span class="tag">HubSpot desteği</span></div>
-        <span class="card-more">Detayları gör ↗</span>
+        <h3 data-i18n="prod.p2h">CRM AI Katmanı</h3>
+        <p data-i18n="prod.p2p">Şirketin mevcut CRM'ine bağlanan, içindeki dağınık veriyi okuyup satış ekibinin kullanabileceği çıktılara çeviren bir yapay zeka katmanı. CRM'in yerini almaz, kayıt tutmaz — yalnızca salt-okunur bir yorumlama katmanıdır.</p>
+        <div class="tags"><span class="tag" data-i18n="prod.p2t1">CRM entegrasyonu</span><span class="tag" data-i18n="prod.p2t2">Satış zekası</span><span class="tag" data-i18n="prod.p2t3">Salt-okunur</span><span class="tag" data-i18n="prod.p2t4">HubSpot desteği</span></div>
+        <span class="card-more" data-i18n="common.details">Detayları gör ↗</span>
       </div>
       </a>
 
       <a class="card-link reveal" href="tool-integration.html" style="--d:.16s">
       <div class="card glow">
-        <div class="card-top"><span class="card-id">MOD.03</span><span class="card-status">Aktif</span></div>
+        <div class="card-top"><span class="card-id">MOD.03</span><span class="card-status" data-i18n="common.active">Aktif</span></div>
         <div class="card-icon">⇄</div>
-        <h3>Entegrasyon &amp; Otomasyon</h3>
-        <p>Araçlar arası veri akışını otomatikleştirir — Google Sheets, Slack, Notion, Airtable ve Gmail arasında. Entegrasyonlar kod yerine YAML ile tanımlanır; tekrar-önleme, akıllı retry, hata uyarısı ve sağlık kontrolü hazır gelir. Küçük işletmelerin Zapier/Make'e ödediği işi kendi altyapınızda yapar.</p>
-        <div class="tags"><span class="tag">YAML pipeline</span><span class="tag">Dedup &amp; retry</span><span class="tag">Slack · Notion · Airtable</span><span class="tag">DRY_RUN</span></div>
-        <span class="card-more">Detayları gör ↗</span>
+        <h3 data-i18n="prod.p3h">Entegrasyon &amp; Otomasyon</h3>
+        <p data-i18n="prod.p3p">Araçlar arası veri akışını otomatikleştirir — Google Sheets, Slack, Notion, Airtable ve Gmail arasında. Entegrasyonlar kod yerine YAML ile tanımlanır; tekrar-önleme, akıllı retry, hata uyarısı ve sağlık kontrolü hazır gelir. Küçük işletmelerin Zapier/Make'e ödediği işi kendi altyapınızda yapar.</p>
+        <div class="tags"><span class="tag" data-i18n="prod.p3t1">YAML pipeline</span><span class="tag" data-i18n="prod.p3t2">Dedup &amp; retry</span><span class="tag">Slack · Notion · Airtable</span><span class="tag">DRY_RUN</span></div>
+        <span class="card-more" data-i18n="common.details">Detayları gör ↗</span>
       </div>
       </a>
 
       <a class="card-link reveal" href="excel-reports.html" style="--d:.24s">
       <div class="card glow">
-        <div class="card-top"><span class="card-id">MOD.04</span><span class="card-status">Aktif</span></div>
+        <div class="card-top"><span class="card-id">MOD.04</span><span class="card-status" data-i18n="common.active">Aktif</span></div>
         <div class="card-icon">▦</div>
-        <h3>Excel &amp; Rapor Otomasyonu</h3>
-        <p>Dağınık bir klasör dolusu CSV/Excel dosyasını tek, temiz ve formatlı bir rapora birleştirir. Karışık tarih ve para formatlarını normalize eder, özetleri çıkarır ve renkli başlıklar, grafik ve "sorunlar" sayfasıyla .xlsx üretir — istenirse HTML/PDF, Google Sheets ve e-posta ile teslim eder.</p>
-        <div class="tags"><span class="tag">CSV/Excel birleştirme</span><span class="tag">Otomatik özet</span><span class="tag">Formatlı .xlsx</span><span class="tag">Stripe abonelik</span></div>
-        <span class="card-more">Detayları gör ↗</span>
+        <h3 data-i18n="prod.p4h">Excel &amp; Rapor Otomasyonu</h3>
+        <p data-i18n="prod.p4p">Dağınık bir klasör dolusu CSV/Excel dosyasını tek, temiz ve formatlı bir rapora birleştirir. Karışık tarih ve para formatlarını normalize eder, özetleri çıkarır ve renkli başlıklar, grafik ve "sorunlar" sayfasıyla .xlsx üretir — istenirse HTML/PDF, Google Sheets ve e-posta ile teslim eder.</p>
+        <div class="tags"><span class="tag" data-i18n="prod.p4t1">CSV/Excel birleştirme</span><span class="tag" data-i18n="prod.p4t2">Otomatik özet</span><span class="tag" data-i18n="prod.p4t3">Formatlı .xlsx</span><span class="tag" data-i18n="prod.p4t4">Stripe abonelik</span></div>
+        <span class="card-more" data-i18n="common.details">Detayları gör ↗</span>
       </div>
       </a>
 
       <a class="card-link reveal" href="n8n-automation.html" style="grid-column:1/-1; --d:.3s">
       <div class="card glow">
-        <div class="card-top"><span class="card-id">MOD.05</span><span class="card-status">Aktif</span></div>
+        <div class="card-top"><span class="card-id">MOD.05</span><span class="card-status" data-i18n="common.active">Aktif</span></div>
         <div class="card-icon">⋔</div>
-        <h3>Müşteri Bazlı İş Akışı (self-host n8n)</h3>
-        <p>Kendi sunucunuzda çalışan, self-host n8n üzerine kurulu müşteri otomasyonu. Her müşteri farklı bir iş yapabilir (biri API'den çeker, biri e-posta okur, biri veritabanından) ama hepsi tek bir workflow içinde müşterinin <span style="font-family:var(--mono);color:var(--accent)">tip</span> alanına göre dallanarak yürür. Hazır örnekler: müşteri bazlı senkron ve WhatsApp randevu hatırlatma + EVET/HAYIR cevabı yakalama.</p>
-        <div class="tags"><span class="tag">self-host n8n</span><span class="tag">WhatsApp hatırlatma</span><span class="tag">tip'e göre dallanma</span><span class="tag">Docker / npx</span></div>
-        <span class="card-more">Detayları gör ↗</span>
+        <h3 data-i18n="prod.p5h">Müşteri Bazlı İş Akışı (self-host n8n)</h3>
+        <p data-i18n="prod.p5p">Kendi sunucunuzda çalışan, self-host n8n üzerine kurulu müşteri otomasyonu. Her müşteri farklı bir iş yapabilir (biri API'den çeker, biri e-posta okur, biri veritabanından) ama hepsi tek bir workflow içinde müşterinin <span style="font-family:var(--mono);color:var(--accent)">tip</span> alanına göre dallanarak yürür. Hazır örnekler: müşteri bazlı senkron ve WhatsApp randevu hatırlatma + EVET/HAYIR cevabı yakalama.</p>
+        <div class="tags"><span class="tag">self-host n8n</span><span class="tag" data-i18n="prod.p5t2">WhatsApp hatırlatma</span><span class="tag" data-i18n="prod.p5t3">tip'e göre dallanma</span><span class="tag">Docker / npx</span></div>
+        <span class="card-more" data-i18n="common.details">Detayları gör ↗</span>
       </div>
       </a>
 
@@ -205,21 +213,21 @@
 <section id="how">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-tag">/nasıl çalışır</span>
-      <h2>Üç adımda içgörü</h2>
+      <span class="section-tag" data-i18n="how.tag">/nasıl çalışır</span>
+      <h2 data-i18n="how.h2">Üç adımda içgörü</h2>
     </div>
     <div class="steps">
       <div class="step reveal" style="--d:0s">
-        <h4>Bağla</h4>
-        <p>Bir URL girin ya da CRM'inizi güvenli şekilde bağlayın. Kurulum dakikalar sürer.</p>
+        <h4 data-i18n="how.s1h">Bağla</h4>
+        <p data-i18n="how.s1p">Bir URL girin ya da CRM'inizi güvenli şekilde bağlayın. Kurulum dakikalar sürer.</p>
       </div>
       <div class="step reveal" style="--d:.08s">
-        <h4>Analiz et</h4>
-        <p>QAsight otomatik kontrolleri çalıştırır, veriyi okur ve bulguları önceliklendirir.</p>
+        <h4 data-i18n="how.s2h">Analiz et</h4>
+        <p data-i18n="how.s2p">QAsight otomatik kontrolleri çalıştırır, veriyi okur ve bulguları önceliklendirir.</p>
       </div>
       <div class="step reveal" style="--d:.16s">
-        <h4>Harekete geç</h4>
-        <p>Müşteri diliyle yazılmış, markanızla sunulan bir rapor veya brifing alırsınız.</p>
+        <h4 data-i18n="how.s3h">Harekete geç</h4>
+        <p data-i18n="how.s3p">Müşteri diliyle yazılmış, markanızla sunulan bir rapor veya brifing alırsınız.</p>
       </div>
     </div>
   </div>
@@ -229,29 +237,29 @@
 <section id="faq">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-tag">/sık sorulanlar</span>
-      <h2>Merak edilenler</h2>
+      <span class="section-tag" data-i18n="faq.tag">/sık sorulanlar</span>
+      <h2 data-i18n="faq.h2">Merak edilenler</h2>
     </div>
     <div class="faq-list">
       <details class="faq-item reveal">
-        <summary>Başkasının sitesini tarayabilir miyim?</summary>
-        <div class="faq-body">Hayır. Web QA modülünde alan adı doğrulaması zorunludur — sahiplik bir meta etiketiyle kanıtlanmadan hiçbir tarama başlamaz. Ayrıca robots.txt'e uyulur ve form gönderimi varsayılan olarak kapalıdır.</div>
+        <summary data-i18n="faq.q1">Başkasının sitesini tarayabilir miyim?</summary>
+        <div class="faq-body" data-i18n="faq.a1">Hayır. Web QA modülünde alan adı doğrulaması zorunludur — sahiplik bir meta etiketiyle kanıtlanmadan hiçbir tarama başlamaz. Ayrıca robots.txt'e uyulur ve form gönderimi varsayılan olarak kapalıdır.</div>
       </details>
       <details class="faq-item reveal">
-        <summary>CRM verime yazma yetkisi veriyor muyum?</summary>
-        <div class="faq-body">Hayır. CRM AI Katmanı bilinçli olarak salt-okunurdur; hiçbir kaydı değiştirmez, silmez ya da yeni kayıt oluşturmaz. Yalnızca okur, yorumlar ve size brifing çıkarır — bu, teknik riski ve müşteri direncini azaltır.</div>
+        <summary data-i18n="faq.q2">CRM verime yazma yetkisi veriyor muyum?</summary>
+        <div class="faq-body" data-i18n="faq.a2">Hayır. CRM AI Katmanı bilinçli olarak salt-okunurdur; hiçbir kaydı değiştirmez, silmez ya da yeni kayıt oluşturmaz. Yalnızca okur, yorumlar ve size brifing çıkarır — bu, teknik riski ve müşteri direncini azaltır.</div>
       </details>
       <details class="faq-item reveal">
-        <summary>Yapay zeka anahtarım yoksa çalışır mı?</summary>
-        <div class="faq-body">Evet. LLM soyutlanmıştır: API anahtarı yoksa kural tabanlı bir yedeğe düşülür ve ürün çevrimdışı çalışmaya devam eder. Verinin binadan çıkmasını istemeyen firmalar için on-prem kurulum da mümkündür.</div>
+        <summary data-i18n="faq.q3">Yapay zeka anahtarım yoksa çalışır mı?</summary>
+        <div class="faq-body" data-i18n="faq.a3">Evet. LLM soyutlanmıştır: API anahtarı yoksa kural tabanlı bir yedeğe düşülür ve ürün çevrimdışı çalışmaya devam eder. Verinin binadan çıkmasını istemeyen firmalar için on-prem kurulum da mümkündür.</div>
       </details>
       <details class="faq-item reveal">
-        <summary>Raporları kendi markamla gönderebilir miyim?</summary>
-        <div class="faq-body">Evet. Raporlar white-label'dır: kendi logonuz, marka renginiz ve paylaşılabilir link ile müşteriye doğrudan gönderilebilir. Ürün ayrıca kopyalayıp gönderebileceğiniz e-posta metnini de üretir.</div>
+        <summary data-i18n="faq.q4">Raporları kendi markamla gönderebilir miyim?</summary>
+        <div class="faq-body" data-i18n="faq.a4">Evet. Raporlar white-label'dır: kendi logonuz, marka renginiz ve paylaşılabilir link ile müşteriye doğrudan gönderilebilir. Ürün ayrıca kopyalayıp gönderebileceğiniz e-posta metnini de üretir.</div>
       </details>
       <details class="faq-item reveal">
-        <summary>Kurulum ne kadar sürer?</summary>
-        <div class="faq-body">Web QA için bir URL girip sahipliği doğrulamak yeterli — dakikalar sürer. CRM tarafında HubSpot ve yaygın CRM'lere salt-okunur bir token ile bağlanılır; ilk brifingi aynı gün alırsınız.</div>
+        <summary data-i18n="faq.q5">Kurulum ne kadar sürer?</summary>
+        <div class="faq-body" data-i18n="faq.a5">Web QA için bir URL girip sahipliği doğrulamak yeterli — dakikalar sürer. CRM tarafında HubSpot ve yaygın CRM'lere salt-okunur bir token ile bağlanılır; ilk brifingi aynı gün alırsınız.</div>
       </details>
     </div>
   </div>
@@ -261,11 +269,11 @@
 <section id="contact">
   <div class="wrap">
     <div class="contact-box reveal">
-      <h2>Bir modülü denemeye hazır mısın?</h2>
-      <p>Ürünlerimiz hakkında bilgi almak veya demo talep etmek için bize ulaş.</p>
+      <h2 data-i18n="contact.h2">Bir modülü denemeye hazır mısın?</h2>
+      <p data-i18n="contact.p">Ürünlerimiz hakkında bilgi almak veya demo talep etmek için bize ulaş.</p>
       <div class="contact-actions">
         <a class="cta-btn" href="mailto:merhaba@qasight.ai">merhaba@qasight.ai</a>
-        <a class="btn-outline" href="#products">Ürünlere dön</a>
+        <a class="btn-outline" href="#products" data-i18n="contact.back">Ürünlere dön</a>
       </div>
     </div>
   </div>
@@ -273,13 +281,13 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <span data-i18n="foot.rights">© 2026 QAsight — tüm modüller korunmaktadır</span>
     <div class="foot-links">
-      <a href="#products">Ürünler</a>
-      <a href="#features">Özellikler</a>
-      <a href="mailto:merhaba@qasight.ai">İletişim</a>
+      <a href="#products" data-i18n="foot.products">Ürünler</a>
+      <a href="#features" data-i18n="foot.features">Özellikler</a>
+      <a href="mailto:merhaba@qasight.ai" data-i18n="foot.contact">İletişim</a>
     </div>
-    <span>build: v1.0.0</span>
+    <span data-i18n="foot.build">build: v1.0.0</span>
   </div>
 </footer>
 
@@ -359,6 +367,102 @@
     });
   }
 </script>
+
+<script>
+window.PAGE_I18N = {
+  "doc.title": "QAsight — AI for Web QA & CRM",
+  "skip": "Skip to content",
+  "hero.eyebrow": "system active · 5 modules live",
+  "hero.h1": "Making quality <span class=\"accent\">visible</span>.",
+  "hero.sub": "QAsight builds AI modules that plug straight into the daily workflow of web agencies and sales teams: they audit sites automatically, read your CRM, and surface what matters.",
+  "hero.cta": "Request a free demo →",
+  "hero.modules": "See the modules",
+  "hero.m1": "active modules",
+  "hero.m2": "automated QA checks",
+  "hero.m3": "connected tools &amp; formats",
+  "rc.live": "live",
+  "rc.score": "health score",
+  "rc.state": "Good — 4 quick wins",
+  "rc.r1": "SSL certificate valid",
+  "rc.r1m": "218 days",
+  "rc.r2": "Mobile-friendly · viewport",
+  "rc.r3": "Largest content loads slowly",
+  "rc.r4": "Broken internal link",
+  "rc.r4m": "3 found",
+  "rc.r5": "Cookie consent not found",
+  "rc.r5m": "GDPR",
+  "rc.foot": "→ white-label report + client email ready",
+  "feat.tag": "/why QAsight",
+  "feat.h2": "An intelligence layer that turns technical results into business language",
+  "feat.p": "Our modules don't replace your existing tools — they sit on top, read the data and turn it into output you can act on.",
+  "feat.b1h": "Automated audit",
+  "feat.b1p": "Enter a URL; more than 60 checks run in seconds. Performance, accessibility, SEO and privacy findings are ranked by impact and effort.",
+  "feat.b2h": "Read-only trust",
+  "feat.b2p": "The CRM layer changes no records. It only reads, interprets, and produces a ready briefing for the sales team.",
+  "feat.b3h": "White-label",
+  "feat.b3p": "Reports carry your brand, in a format ready to send to the client.",
+  "feat.b4h": "Human language",
+  "feat.b4p": "Explanations the client understands, instead of technical jargon.",
+  "feat.b5h": "Fast integration",
+  "feat.b5p": "Connects to HubSpot and common CRMs within minutes.",
+  "prod.tag": "/products",
+  "prod.h2": "Module library",
+  "prod.p": "Each module is designed to do one thing very well. Pick one, or use them all together.",
+  "prod.p1h": "Web QA AI Service",
+  "prod.p1p": "Lets web agencies automatically test client sites and produce a professional, client-ready QA report. Enter a URL, more than 60 checks run; findings are ranked by impact and effort, and AI explains the technical results in the client's language.",
+  "prod.p1t1": "QA automation",
+  "prod.p1t2": "SEO &amp; performance",
+  "prod.p1t3": "Privacy audit",
+  "prod.p1t4": "White-label report",
+  "prod.p2h": "CRM AI Layer",
+  "prod.p2p": "An AI layer that connects to the company's existing CRM, reads the messy data inside and turns it into output the sales team can use. It doesn't replace the CRM and keeps no records — it is a read-only interpretation layer.",
+  "prod.p2t1": "CRM integration",
+  "prod.p2t2": "Sales intelligence",
+  "prod.p2t3": "Read-only",
+  "prod.p2t4": "HubSpot support",
+  "prod.p3h": "Integration &amp; Automation",
+  "prod.p3p": "Automates data flow between tools — across Google Sheets, Slack, Notion, Airtable and Gmail. Integrations are defined in YAML instead of code; dedup, smart retry, failure alerts and health checks come built in. It does the work small businesses pay Zapier/Make for, on your own infrastructure.",
+  "prod.p3t1": "YAML pipeline",
+  "prod.p3t2": "Dedup &amp; retry",
+  "prod.p4h": "Excel &amp; Report Automation",
+  "prod.p4p": "Merges a whole folder of messy CSV/Excel files into one clean, formatted report. It normalizes mixed date and currency formats, extracts summaries and produces an .xlsx with colored headers, a chart and an \"issues\" sheet — and, on request, delivers via HTML/PDF, Google Sheets and email.",
+  "prod.p4t1": "CSV/Excel merge",
+  "prod.p4t2": "Automatic summary",
+  "prod.p4t3": "Formatted .xlsx",
+  "prod.p4t4": "Stripe subscription",
+  "prod.p5h": "Customer-Based Workflow (self-host n8n)",
+  "prod.p5p": "Customer automation running on your own server, built on self-hosted n8n. Each customer can do a different job (one pulls from an API, one reads email, one from a database) but all run inside a single workflow, branching on the customer's <span style=\"font-family:var(--mono);color:var(--accent)\">type</span> field. Ready examples: customer-based sync and WhatsApp appointment reminders + YES/NO reply capture.",
+  "prod.p5t2": "WhatsApp reminder",
+  "prod.p5t3": "branch by type",
+  "how.tag": "/how it works",
+  "how.h2": "Insight in three steps",
+  "how.s1h": "Connect",
+  "how.s1p": "Enter a URL or securely connect your CRM. Setup takes minutes.",
+  "how.s2h": "Analyze",
+  "how.s2p": "QAsight runs the automated checks, reads the data and prioritizes the findings.",
+  "how.s3h": "Act",
+  "how.s3p": "You get a report or briefing written in the client's language, presented with your brand.",
+  "faq.tag": "/frequently asked",
+  "faq.h2": "Common questions",
+  "faq.q1": "Can I scan someone else's site?",
+  "faq.a1": "No. The Web QA module requires domain verification — no scan starts until ownership is proven with a meta tag. It also respects robots.txt, and form submission is off by default.",
+  "faq.q2": "Am I giving write access to my CRM data?",
+  "faq.a2": "No. The CRM AI Layer is intentionally read-only; it changes, deletes or creates no records. It only reads, interprets and produces a briefing for you — which lowers technical risk and customer resistance.",
+  "faq.q3": "Does it work without an AI key?",
+  "faq.a3": "Yes. The LLM is abstracted: with no API key it falls back to a rule-based path and the product keeps working offline. An on-prem install is also possible for companies that don't want data leaving the building.",
+  "faq.q4": "Can I send reports under my own brand?",
+  "faq.a4": "Yes. Reports are white-label: they can be sent straight to the client with your own logo, brand color and a shareable link. The product also generates the email text you can copy and send.",
+  "faq.q5": "How long does setup take?",
+  "faq.a5": "For Web QA, entering a URL and verifying ownership is enough — it takes minutes. On the CRM side you connect to HubSpot and common CRMs with a read-only token; you get the first briefing the same day.",
+  "contact.h2": "Ready to try a module?",
+  "contact.p": "Reach out to learn more about our products or request a demo.",
+  "contact.back": "Back to products",
+  "foot.products": "Products",
+  "foot.features": "Features",
+  "foot.contact": "Contact"
+};
+</script>
+<script src="i18n.js"></script>
 
 </body>
 </html>

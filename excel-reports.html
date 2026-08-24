@@ -18,39 +18,47 @@
   <div class="wrap">
     <a class="logo" href="index.html"><span class="dot"></span>QAsight</a>
     <div class="nav-right">
-      <a class="navlink" href="index.html#products">Ürünler</a>
-      <a class="navlink" href="index.html#faq">SSS</a>
-      <a class="navlink" href="index.html#contact">İletişim</a>
-      <a class="cta-btn" href="index.html#contact">Demo iste</a>
+      <a class="navlink" href="index.html#products" data-i18n="nav.products">Ürünler</a>
+      <a class="navlink" href="index.html#faq" data-i18n="nav.faq">SSS</a>
+      <a class="navlink" href="index.html#contact" data-i18n="nav.contact">İletişim</a>
+      <a class="cta-btn" href="index.html#contact" data-i18n="nav.demo">Demo iste</a>
+      <div class="lang-switch" role="group" aria-label="Dil / Language">
+        <button class="lang-btn" data-lang="tr" type="button">TR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <div class="wrap">
-    <a href="index.html#products">Ürünler</a>
-    <a href="index.html#faq">SSS</a>
-    <a href="index.html#contact">İletişim</a>
-    <a class="cta-btn" href="index.html#contact">Demo iste</a>
+    <div class="lang-switch" role="group" aria-label="Dil / Language">
+      <button class="lang-btn" data-lang="tr" type="button">TR</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <a href="index.html#products" data-i18n="nav.products">Ürünler</a>
+    <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
+    <a href="index.html#contact" data-i18n="nav.contact">İletişim</a>
+    <a class="cta-btn" href="index.html#contact" data-i18n="nav.demo">Demo iste</a>
   </div>
 </div>
 
 <header class="detail-hero">
   <div class="wrap">
-    <a class="back-link" href="index.html">← Tüm ürünler</a>
-    <span class="card-id">MOD.04 · Aktif</span>
-    <h1>Excel &amp; Rapor Otomasyonu</h1>
-    <p class="lede">Bir klasör dolusu dağınık CSV/Excel dosyasını tek, temiz ve formatlı bir rapora birleştirir. Farklı kolon adları, karışık tarih ve para formatları olsa bile veriyi normalize eder, özetler çıkarır ve renkli başlıklar, grafik ve bir "sorunlar" sayfasıyla profesyonel bir <span style="font-family:var(--mono);color:var(--accent)">.xlsx</span> üretir — istenirse tek sayfalık HTML/PDF özet, paylaşılan Google Sheet ve e-posta teslimi ile.</p>
-    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);">"Kodu değil, tek bir yapılandırma dosyasını değiştirerek yeni bir müşteriye dakikalar içinde uyarlanır."</p>
+    <a class="back-link" href="index.html" data-i18n="common.back">← Tüm ürünler</a>
+    <span class="card-id" data-i18n="ex.id">MOD.04 · Aktif</span>
+    <h1 data-i18n="ex.h1">Excel &amp; Rapor Otomasyonu</h1>
+    <p class="lede" data-i18n="ex.lede">Bir klasör dolusu dağınık CSV/Excel dosyasını tek, temiz ve formatlı bir rapora birleştirir. Farklı kolon adları, karışık tarih ve para formatları olsa bile veriyi normalize eder, özetler çıkarır ve renkli başlıklar, grafik ve bir "sorunlar" sayfasıyla profesyonel bir <span style="font-family:var(--mono);color:var(--accent)">.xlsx</span> üretir — istenirse tek sayfalık HTML/PDF özet, paylaşılan Google Sheet ve e-posta teslimi ile.</p>
+    <p class="lede" style="margin-top:16px; font-style:italic; color:var(--accent-2);" data-i18n="ex.quote">"Kodu değil, tek bir yapılandırma dosyasını değiştirerek yeni bir müşteriye dakikalar içinde uyarlanır."</p>
   </div>
 </header>
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Ne yapar</h2>
-    <div class="flow">Klasördeki tüm .csv / .xlsx / .xls ─▶ Birleştir ─▶ Normalize ─▶ Özetle ─▶ Formatlı .xlsx
+    <h2 data-i18n="ex.s1h">Ne yapar</h2>
+    <div class="flow" data-i18n="ex.flow1">Klasördeki tüm .csv / .xlsx / .xls ─▶ Birleştir ─▶ Normalize ─▶ Özetle ─▶ Formatlı .xlsx
                                                                        └▶ HTML/PDF · Google Sheets · e-posta</div>
-    <div class="diff-grid" style="margin-top:24px;">
+    <div class="diff-grid" style="margin-top:24px;" data-i18n="ex.grid1">
       <div class="diff-row"><div class="diff-label">01 · Birleştir</div><div class="diff-desc">Klasördeki her <span style="font-family:var(--mono)">.csv / .xlsx / .xls</span> dosyasını tek bir tabloda toplar; her satır kaynak dosyasıyla etiketlenir.</div></div>
       <div class="diff-row"><div class="diff-label">02 · Normalize et</div><div class="diff-desc">Karışık tarih formatlarını ayrıştırır, para sembollerini temizler (<span style="font-family:var(--mono)">$12.50</span>, <span style="font-family:var(--mono)">12,50 TL</span>), adları düzenler (<span style="font-family:var(--mono)">blue widget</span> = <span style="font-family:var(--mono)">Blue  Widget</span>) ve yinelenen satırları kaldırır.</div></div>
       <div class="diff-row"><div class="diff-label">03 · Özetle</div><div class="diff-desc">Toplam gelir, satılan adet, ortalama sipariş değeri, en çok satan ürünler ve her gruplama boyutu için bir kırılım (ürüne göre, müşteriye göre…).</div></div>
@@ -61,23 +69,23 @@
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Üretilen Excel'in içi</h2>
-    <table class="spec-table">
+    <h2 data-i18n="ex.s2h">Üretilen Excel'in içi</h2>
+    <table class="spec-table" data-i18n="ex.tbl1">
       <tr><th>Sayfa</th><th>İçerik</th></tr>
       <tr><td class="key">Özet</td><td>Ana metrikler ve çubuk grafikli bir "En çok satanlar" tablosu</td></tr>
       <tr><td class="key">Kırılım (Boyuta göre)</td><td>Her gruplama kolonu için bir sayfa (örn. <em>Ürüne göre</em>, <em>Müşteriye göre</em>), gelire göre sıralı</td></tr>
       <tr><td class="key">Veri</td><td>Birleştirilmiş ve temizlenmiş tüm satırlar, her biri kaynak dosyasıyla etiketli</td></tr>
       <tr><td class="key">Sorunlar</td><td>Veri kalitesi raporu: okunan satır, kaldırılan yinelenen, atlanan satır ve dosya başına okunamayan hücreler</td></tr>
     </table>
-    <p style="margin-top:20px;">Dosyalar eksik, Excel'de açık ya da bozuk olduğunda Python hata dökümü yerine sade, anlaşılır hata mesajları gösterilir.</p>
+    <p style="margin-top:20px;" data-i18n="ex.s2p">Dosyalar eksik, Excel'de açık ya da bozuk olduğunda Python hata dökümü yerine sade, anlaşılır hata mesajları gösterilir.</p>
   </div>
 </section>
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Yeni müşteriye uyarlama — asıl mesele</h2>
-    <p>Neredeyse her özelleştirme <strong>yapılandırma dosyasındaki</strong> bir değişikliktir; kod genellikle hiç değişmez. İki format desteklenir: tam güç için <span style="font-family:var(--mono)">config.py</span>, geliştirici olmayanlar için düz veri <span style="font-family:var(--mono)">config.yaml</span>.</p>
-    <table class="spec-table">
+    <h2 data-i18n="ex.s3h">Yeni müşteriye uyarlama — asıl mesele</h2>
+    <p data-i18n="ex.s3p">Neredeyse her özelleştirme <strong>yapılandırma dosyasındaki</strong> bir değişikliktir; kod genellikle hiç değişmez. İki format desteklenir: tam güç için <span style="font-family:var(--mono)">config.py</span>, geliştirici olmayanlar için düz veri <span style="font-family:var(--mono)">config.yaml</span>.</p>
+    <table class="spec-table" data-i18n="ex.tbl2">
       <tr><th>Değişen</th><th>Nerede</th></tr>
       <tr><td class="key">Kolon başlıkları</td><td>COLUMN_MAPPING (büyük/küçük harf duyarsız; çok dilli örnekler dahil)</td></tr>
       <tr><td class="key">Temizleme</td><td>COLUMN_CLEANING (date, number, integer, title, strip) + sabit DATE_FORMAT / DECIMAL_STYLE</td></tr>
@@ -91,8 +99,8 @@
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>İki kullanım şekli</h2>
-    <table class="spec-table">
+    <h2 data-i18n="ex.s4h">İki kullanım şekli</h2>
+    <table class="spec-table" data-i18n="ex.tbl3">
       <tr><th>Şekil</th><th>Ne için</th></tr>
       <tr><td class="key">CLI</td><td>Bir komutla klasörü rapora çevirir: <span style="font-family:var(--mono)">merge_reports.py --folder ./data</span>. Tarih aralığı, glob deseni, HTML/PDF, Google Sheets ve e-posta bayrakları desteklenir.</td></tr>
       <tr><td class="key">Web arayüzü</td><td>Terminal istemeyen müşteriler için sürükle-bırak: dosyaları yükle, bir config seç, Excel ve HTML raporu indir (Streamlit).</td></tr>
@@ -102,9 +110,9 @@
 
 <section class="detail-section">
   <div class="wrap">
-    <h2>Abonelik olarak satmak</h2>
-    <p>Tek seferlik iş yerine düzenli gelir isterseniz, raporları <strong>siz</strong> bir programa göre üretip teslim edersiniz — müşteri kodu hiç görmez. Bir yönetim manifestindeki <span style="font-family:var(--mono)">active</span> bayrağı abonelik kill-switch'inizdir: <span style="font-family:var(--mono)">false</span> yapın, o müşterinin raporları durur.</p>
-    <div class="diff-grid">
+    <h2 data-i18n="ex.s5h">Abonelik olarak satmak</h2>
+    <p data-i18n="ex.s5p">Tek seferlik iş yerine düzenli gelir isterseniz, raporları <strong>siz</strong> bir programa göre üretip teslim edersiniz — müşteri kodu hiç görmez. Bir yönetim manifestindeki <span style="font-family:var(--mono)">active</span> bayrağı abonelik kill-switch'inizdir: <span style="font-family:var(--mono)">false</span> yapın, o müşterinin raporları durur.</p>
+    <div class="diff-grid" data-i18n="ex.grid2">
       <div class="diff-row"><div class="diff-label">Çoklu müşteri</div><div class="diff-desc">Tek çalıştırmayla tüm aktif müşteriler işlenir; biri hata verse diğerleri etkilenmez. Her çalışma faturalama için bir log satırı yazar (müşteri, zaman, satır, teslim, hata).</div></div>
       <div class="diff-row"><div class="diff-label">Tek komutla onboarding</div><div class="diff-desc">Yeni müşteri için manifest, kişiselleştirilmiş başlangıç config'i ve boş bir <span style="font-family:var(--mono)">data/</span> klasörü tek komutla oluşturulur.</div></div>
       <div class="diff-row"><div class="diff-label">Stripe kill-switch</div><div class="diff-desc">Bir webhook servisi abonelik olaylarını dinler: ödeme başarılı → <span style="font-family:var(--mono)">active: true</span>; ödeme başarısız/iptal → <span style="font-family:var(--mono)">active: false</span>. Sonraki çalıştırmada ödenmemiş müşteriler atlanır. İmza doğrulanır, yalnızca gerçek olaylar işlenir.</div></div>
@@ -116,21 +124,21 @@
 <section class="detail-section">
   <div class="wrap">
     <div class="detail-cta">
-      <h3>Dağınık dosyalar, tek temiz rapor</h3>
-      <p>Örnek verilerinizle bir demo rapor üretelim; kendi formatınıza dakikalar içinde uyarlayalım.</p>
-      <a class="cta-btn" href="index.html#contact">İletişime geç</a>
+      <h3 data-i18n="ex.ctah">Dağınık dosyalar, tek temiz rapor</h3>
+      <p data-i18n="ex.ctap">Örnek verilerinizle bir demo rapor üretelim; kendi formatınıza dakikalar içinde uyarlayalım.</p>
+      <a class="cta-btn" href="index.html#contact" data-i18n="common.contact">İletişime geç</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 QAsight — tüm modüller korunmaktadır</span>
+    <span data-i18n="foot.rights">© 2026 QAsight — tüm modüller korunmaktadır</span>
     <div class="foot-links">
-      <a href="index.html#products">Ürünler</a>
-      <a href="index.html#contact">İletişim</a>
+      <a href="index.html#products" data-i18n="foot.products">Ürünler</a>
+      <a href="index.html#contact" data-i18n="foot.contact">İletişim</a>
     </div>
-    <span>build: v1.0.0</span>
+    <span data-i18n="foot.build">build: v1.0.0</span>
   </div>
 </footer>
 
@@ -158,6 +166,52 @@
     document.querySelectorAll('.detail-section, .detail-hero').forEach(el => { el.classList.add('reveal'); io.observe(el); });
   }
 </script>
+
+<script>
+window.PAGE_I18N = {
+  "doc.title": "Excel & Report Automation — QAsight",
+  "ex.id": "MOD.04 · Active",
+  "ex.h1": "Excel &amp; Report Automation",
+  "ex.lede": `Merges a whole folder of messy CSV/Excel files into one clean, formatted report. Even with different column names and mixed date and currency formats, it normalizes the data, extracts summaries and produces a professional <span style="font-family:var(--mono);color:var(--accent)">.xlsx</span> with colored headers, a chart and an "issues" sheet — and, on request, a one-page HTML/PDF summary, a shared Google Sheet and email delivery.`,
+  "ex.quote": `"It adapts to a new customer in minutes by changing a single configuration file, not the code."`,
+  "ex.s1h": "What it does",
+  "ex.flow1": `All .csv / .xlsx / .xls in the folder ─▶ Merge ─▶ Normalize ─▶ Summarize ─▶ Formatted .xlsx
+                                                                    └▶ HTML/PDF · Google Sheets · email`,
+  "ex.grid1": `<div class="diff-row"><div class="diff-label">01 · Merge</div><div class="diff-desc">Collects every <span style="font-family:var(--mono)">.csv / .xlsx / .xls</span> file in the folder into a single table; each row is tagged with its source file.</div></div>
+      <div class="diff-row"><div class="diff-label">02 · Normalize</div><div class="diff-desc">Parses mixed date formats, strips currency symbols (<span style="font-family:var(--mono)">$12.50</span>, <span style="font-family:var(--mono)">12,50 TL</span>), tidies names (<span style="font-family:var(--mono)">blue widget</span> = <span style="font-family:var(--mono)">Blue  Widget</span>) and removes duplicate rows.</div></div>
+      <div class="diff-row"><div class="diff-label">03 · Summarize</div><div class="diff-desc">Total revenue, units sold, average order value, best-selling products, and one breakdown per grouping dimension (by product, by customer…).</div></div>
+      <div class="diff-row"><div class="diff-label">04 · Export</div><div class="diff-desc">A formatted Excel with colored headers, currency formatting, a frozen header row, a bar chart and a data-quality "Issues" sheet — and, on request, HTML/PDF, Google Sheet and email.</div></div>`,
+  "ex.s2h": "Inside the generated Excel",
+  "ex.tbl1": `<tr><th>Sheet</th><th>Contents</th></tr>
+      <tr><td class="key">Summary</td><td>Key metrics and a "Best sellers" table with a bar chart</td></tr>
+      <tr><td class="key">Breakdown (by dimension)</td><td>One sheet per grouping column (e.g. <em>By product</em>, <em>By customer</em>), sorted by revenue</td></tr>
+      <tr><td class="key">Data</td><td>All merged and cleaned rows, each tagged with its source file</td></tr>
+      <tr><td class="key">Issues</td><td>Data-quality report: rows read, duplicates removed, rows skipped, and unreadable cells per file</td></tr>`,
+  "ex.s2p": "When files are missing, open in Excel, or malformed, plain, understandable error messages are shown instead of a Python traceback.",
+  "ex.s3h": "Adapting for a new customer — the important part",
+  "ex.s3p": `Almost every customization is a change in the <strong>config file</strong>; the code usually doesn't change at all. Two formats are supported: <span style="font-family:var(--mono)">config.py</span> for full power, and plain-data <span style="font-family:var(--mono)">config.yaml</span> for non-developers.`,
+  "ex.tbl2": `<tr><th>What changes</th><th>Where</th></tr>
+      <tr><td class="key">Column headers</td><td>COLUMN_MAPPING (case-insensitive; multilingual examples included)</td></tr>
+      <tr><td class="key">Cleaning</td><td>COLUMN_CLEANING (date, number, integer, title, strip) + fixed DATE_FORMAT / DECIMAL_STYLE</td></tr>
+      <tr><td class="key">Business math</td><td>DERIVED_COLUMNS (e.g. line total) and HEADLINE_METRICS</td></tr>
+      <tr><td class="key">Report shape</td><td>GROUP_BY, GROUP_AGGREGATIONS, TOP_N_PRODUCTS</td></tr>
+      <tr><td class="key">Look</td><td>CURRENCY_FORMAT, header colors, REPORT_TITLE</td></tr>
+      <tr><td class="key">Delivery</td><td>EMAIL and GSHEETS (credentials are read from environment variables, never written to config)</td></tr>`,
+  "ex.s4h": "Two ways to use it",
+  "ex.tbl3": `<tr><th>Form</th><th>What for</th></tr>
+      <tr><td class="key">CLI</td><td>Turns a folder into a report with one command: <span style="font-family:var(--mono)">merge_reports.py --folder ./data</span>. Date range, glob pattern, HTML/PDF, Google Sheets and email flags are supported.</td></tr>
+      <tr><td class="key">Web UI</td><td>Drag-and-drop for customers who don't want a terminal: upload files, pick a config, download the Excel and HTML report (Streamlit).</td></tr>`,
+  "ex.s5h": "Selling it as a subscription",
+  "ex.s5p": `If you want recurring revenue instead of one-off work, <strong>you</strong> generate and deliver the reports on a schedule — the customer never sees the code. An <span style="font-family:var(--mono)">active</span> flag in a management manifest is your subscription kill-switch: set it to <span style="font-family:var(--mono)">false</span> and that customer's reports stop.`,
+  "ex.grid2": `<div class="diff-row"><div class="diff-label">Multi-customer</div><div class="diff-desc">A single run processes all active customers; if one errors the others aren't affected. Each run writes a log line for billing (customer, time, rows, delivery, errors).</div></div>
+      <div class="diff-row"><div class="diff-label">One-command onboarding</div><div class="diff-desc">For a new customer, a manifest, a personalized starter config and an empty <span style="font-family:var(--mono)">data/</span> folder are created with one command.</div></div>
+      <div class="diff-row"><div class="diff-label">Stripe kill-switch</div><div class="diff-desc">A webhook service listens to subscription events: payment succeeds → <span style="font-family:var(--mono)">active: true</span>; payment fails/cancelled → <span style="font-family:var(--mono)">active: false</span>. On the next run, unpaid customers are skipped. Signatures are verified, so only genuine events are processed.</div></div>
+      <div class="diff-row"><div class="diff-label">Scheduled runs</div><div class="diff-desc">Because it's a plain CLI, it's scheduled monthly/daily with cron — reports go out automatically.</div></div>`,
+  "ex.ctah": "Messy files, one clean report",
+  "ex.ctap": "Let's produce a demo report from your sample data and adapt it to your own format in minutes."
+};
+</script>
+<script src="i18n.js"></script>
 
 </body>
 </html>
